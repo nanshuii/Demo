@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LENDocumentShareViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvy-LU-L38">
+                    <rect key="frame" x="171.5" y="120" width="71" height="30"/>
+                    <state key="normal" title="share PDF"/>
+                    <connections>
+                        <action selector="sharePDF:" destination="-1" eventType="touchUpInside" id="j9w-71-2o4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHW-TM-ixK">
+                    <rect key="frame" x="172.5" y="158" width="69" height="30"/>
+                    <state key="normal" title="show PDF"/>
+                    <connections>
+                        <action selector="showPDF:" destination="-1" eventType="touchUpInside" id="3m8-7j-AGm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfB-ue-4gN">
+                    <rect key="frame" x="169.5" y="196" width="75" height="30"/>
+                    <state key="normal" title="shareJPEG"/>
+                    <connections>
+                        <action selector="sharePNG:" destination="-1" eventType="touchUpInside" id="91G-HH-6DZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8F-8h-EBk">
+                    <rect key="frame" x="168.5" y="234" width="77" height="30"/>
+                    <state key="normal" title="show JPEG"/>
+                    <connections>
+                        <action selector="showPNG:" destination="-1" eventType="touchUpInside" id="jGT-Em-e9B"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If7-Rb-Avh">
+                    <rect key="frame" x="166.5" y="272" width="81" height="30"/>
+                    <state key="normal" title="share H264"/>
+                    <connections>
+                        <action selector="shareH264:" destination="-1" eventType="touchUpInside" id="lhh-1Z-wQN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6W7-vS-co0">
+                    <rect key="frame" x="167.5" y="310" width="79" height="30"/>
+                    <state key="normal" title="show H264"/>
+                    <connections>
+                        <action selector="showH264:" destination="-1" eventType="touchUpInside" id="yF1-GW-Ya2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDa-PL-up8">
+                    <rect key="frame" x="166.5" y="348" width="81" height="30"/>
+                    <state key="normal" title="share H265"/>
+                    <connections>
+                        <action selector="shareH265:" destination="-1" eventType="touchUpInside" id="hMZ-iO-3Nq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6VS-Vx-gfx">
+                    <rect key="frame" x="167.5" y="386" width="79" height="30"/>
+                    <state key="normal" title="show H265"/>
+                    <connections>
+                        <action selector="showH265:" destination="-1" eventType="touchUpInside" id="nL2-Jg-jCH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="If7-Rb-Avh" firstAttribute="top" secondItem="K8F-8h-EBk" secondAttribute="bottom" constant="8" id="18I-t9-7li"/>
+                <constraint firstItem="wfB-ue-4gN" firstAttribute="top" secondItem="sHW-TM-ixK" secondAttribute="bottom" constant="8" id="9MH-bb-EYo"/>
+                <constraint firstItem="6VS-Vx-gfx" firstAttribute="top" secondItem="KDa-PL-up8" secondAttribute="bottom" constant="8" id="Ayh-zW-uNE"/>
+                <constraint firstItem="6VS-Vx-gfx" firstAttribute="centerX" secondItem="KDa-PL-up8" secondAttribute="centerX" id="LsS-vj-FAR"/>
+                <constraint firstItem="K8F-8h-EBk" firstAttribute="top" secondItem="wfB-ue-4gN" secondAttribute="bottom" constant="8" id="QlK-g1-yWE"/>
+                <constraint firstItem="KDa-PL-up8" firstAttribute="centerX" secondItem="6W7-vS-co0" secondAttribute="centerX" id="ScQ-FK-ngR"/>
+                <constraint firstItem="K8F-8h-EBk" firstAttribute="centerX" secondItem="wfB-ue-4gN" secondAttribute="centerX" id="Sg0-l4-Ujl"/>
+                <constraint firstItem="6W7-vS-co0" firstAttribute="top" secondItem="If7-Rb-Avh" secondAttribute="bottom" constant="8" id="T8y-Uc-mFW"/>
+                <constraint firstItem="Bvy-LU-L38" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Vs3-IM-tqi"/>
+                <constraint firstItem="If7-Rb-Avh" firstAttribute="centerX" secondItem="K8F-8h-EBk" secondAttribute="centerX" id="Z19-ex-hSJ"/>
+                <constraint firstItem="KDa-PL-up8" firstAttribute="top" secondItem="6W7-vS-co0" secondAttribute="bottom" constant="8" id="aVH-DU-E1R"/>
+                <constraint firstItem="sHW-TM-ixK" firstAttribute="centerX" secondItem="Bvy-LU-L38" secondAttribute="centerX" id="e5K-pM-7nr"/>
+                <constraint firstItem="Bvy-LU-L38" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="76" id="fXa-bl-bbC"/>
+                <constraint firstItem="wfB-ue-4gN" firstAttribute="centerX" secondItem="sHW-TM-ixK" secondAttribute="centerX" id="gu8-xa-Ogn"/>
+                <constraint firstItem="6W7-vS-co0" firstAttribute="centerX" secondItem="If7-Rb-Avh" secondAttribute="centerX" id="iCJ-ap-2Yv"/>
+                <constraint firstItem="sHW-TM-ixK" firstAttribute="top" secondItem="Bvy-LU-L38" secondAttribute="bottom" constant="8" id="sfW-OH-jap"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="258" y="154"/>
+        </view>
+    </objects>
+</document>

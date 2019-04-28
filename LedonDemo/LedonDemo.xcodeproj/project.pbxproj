@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D365E148227537CD00D158D5 /* LENDocumentShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D365E146227537CD00D158D5 /* LENDocumentShareViewController.m */; };
+		D365E149227537CD00D158D5 /* LENDocumentShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D365E147227537CD00D158D5 /* LENDocumentShareViewController.xib */; };
+		D365E14B227538D300D158D5 /* DocumentShareTest.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D365E14A227538D300D158D5 /* DocumentShareTest.pdf */; };
+		D365E14E227569FE00D158D5 /* DocumentShareTest.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D365E14D227569FE00D158D5 /* DocumentShareTest.jpeg */; };
+		D365E15022756CD200D158D5 /* DocumentShareTest.MOV in Resources */ = {isa = PBXBuildFile; fileRef = D365E14F22756CD200D158D5 /* DocumentShareTest.MOV */; };
+		D365E15222756E0800D158D5 /* DocumentShareTest2.MOV in Resources */ = {isa = PBXBuildFile; fileRef = D365E15122756E0800D158D5 /* DocumentShareTest2.MOV */; };
 		D3CBF2CA22486B9C00DECFC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CBF2C922486B9C00DECFC3 /* AppDelegate.m */; };
 		D3CBF2CD22486B9C00DECFC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CBF2CC22486B9C00DECFC3 /* ViewController.m */; };
 		D3CBF2D022486B9C00DECFC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3CBF2CE22486B9C00DECFC3 /* Main.storyboard */; };
@@ -37,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D365E145227537CD00D158D5 /* LENDocumentShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENDocumentShareViewController.h; sourceTree = "<group>"; };
+		D365E146227537CD00D158D5 /* LENDocumentShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENDocumentShareViewController.m; sourceTree = "<group>"; };
+		D365E147227537CD00D158D5 /* LENDocumentShareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENDocumentShareViewController.xib; sourceTree = "<group>"; };
+		D365E14A227538D300D158D5 /* DocumentShareTest.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = DocumentShareTest.pdf; sourceTree = "<group>"; };
+		D365E14C22753A8300D158D5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D365E14D227569FE00D158D5 /* DocumentShareTest.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DocumentShareTest.jpeg; sourceTree = "<group>"; };
+		D365E14F22756CD200D158D5 /* DocumentShareTest.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = DocumentShareTest.MOV; sourceTree = "<group>"; };
+		D365E15122756E0800D158D5 /* DocumentShareTest2.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = DocumentShareTest2.MOV; sourceTree = "<group>"; };
 		D3CBF2C522486B9C00DECFC3 /* LedonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LedonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3CBF2C822486B9C00DECFC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3CBF2C922486B9C00DECFC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +97,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D365E1442275379100D158D5 /* DocumentShare */ = {
+			isa = PBXGroup;
+			children = (
+				D365E145227537CD00D158D5 /* LENDocumentShareViewController.h */,
+				D365E146227537CD00D158D5 /* LENDocumentShareViewController.m */,
+				D365E147227537CD00D158D5 /* LENDocumentShareViewController.xib */,
+				D365E14A227538D300D158D5 /* DocumentShareTest.pdf */,
+				D365E14D227569FE00D158D5 /* DocumentShareTest.jpeg */,
+				D365E15122756E0800D158D5 /* DocumentShareTest2.MOV */,
+				D365E14F22756CD200D158D5 /* DocumentShareTest.MOV */,
+				D365E14C22753A8300D158D5 /* README.md */,
+			);
+			path = DocumentShare;
+			sourceTree = "<group>";
+		};
 		D3CBF2BC22486B9C00DECFC3 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +135,7 @@
 		D3CBF2C722486B9C00DECFC3 /* LedonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D365E1442275379100D158D5 /* DocumentShare */,
 				D3CBF2C822486B9C00DECFC3 /* AppDelegate.h */,
 				D3CBF2C922486B9C00DECFC3 /* AppDelegate.m */,
 				D3CBF2CB22486B9C00DECFC3 /* ViewController.h */,
@@ -202,6 +232,7 @@
 		D3CBF2BD22486B9C00DECFC3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LEN;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = ledon;
 				TargetAttributes = {
@@ -245,8 +276,13 @@
 			files = (
 				D3CBF2D522486B9C00DECFC3 /* LaunchScreen.storyboard in Resources */,
 				D3CBF2D222486B9C00DECFC3 /* Assets.xcassets in Resources */,
+				D365E14B227538D300D158D5 /* DocumentShareTest.pdf in Resources */,
+				D365E149227537CD00D158D5 /* LENDocumentShareViewController.xib in Resources */,
 				D3CBF2D022486B9C00DECFC3 /* Main.storyboard in Resources */,
+				D365E15222756E0800D158D5 /* DocumentShareTest2.MOV in Resources */,
 				D3CBF2FE22486BBB00DECFC3 /* MainViewController.xib in Resources */,
+				D365E14E227569FE00D158D5 /* DocumentShareTest.jpeg in Resources */,
+				D365E15022756CD200D158D5 /* DocumentShareTest.MOV in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +310,7 @@
 				D3CBF2CD22486B9C00DECFC3 /* ViewController.m in Sources */,
 				D3CBF2D822486B9C00DECFC3 /* main.m in Sources */,
 				D3CBF2CA22486B9C00DECFC3 /* AppDelegate.m in Sources */,
+				D365E148227537CD00D158D5 /* LENDocumentShareViewController.m in Sources */,
 				D3CBF2FD22486BBB00DECFC3 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
