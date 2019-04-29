@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "LENDocumentShareViewController.h"
+#import "LENDocumentReceiveViewController.h"
 
 #define kStatusBarAndNavigationBarHeight (Is_Iphone_X) ? 88 : 64
 #define Is_Iphone_X kFullScreenHeight >= 812.0
@@ -27,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.titles = @[@"文件分享与快速预览"];
+    self.titles = @[@"文件分享与快速预览", @"接收文件分享"];
     [self.view addSubview:self.baseTableView];
 }
 
@@ -56,6 +57,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0 && indexPath.row == 0) {
         LENDocumentShareViewController *vc = [LENDocumentShareViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.section == 0 && indexPath.row == 1) {
+        LENDocumentReceiveViewController *vc = [LENDocumentReceiveViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
