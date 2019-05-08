@@ -18,6 +18,9 @@
 		D3AFDDFD2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDDFB2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m */; };
 		D3AFDDFE2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AFDDFC2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.xib */; };
 		D3AFDE012276EAE00033DB64 /* LENDocumentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDE002276EAE00033DB64 /* LENDocumentModel.m */; };
+		D3BF54032280525100D15655 /* LENSquareGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BF54022280525100D15655 /* LENSquareGridView.m */; };
+		D3BF54082280584100D15655 /* LENSquareGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BF54062280584100D15655 /* LENSquareGridViewController.m */; };
+		D3BF54092280584100D15655 /* LENSquareGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BF54072280584100D15655 /* LENSquareGridViewController.xib */; };
 		D3CBF2CA22486B9C00DECFC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CBF2C922486B9C00DECFC3 /* AppDelegate.m */; };
 		D3CBF2CD22486B9C00DECFC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CBF2CC22486B9C00DECFC3 /* ViewController.m */; };
 		D3CBF2D022486B9C00DECFC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3CBF2CE22486B9C00DECFC3 /* Main.storyboard */; };
@@ -65,6 +68,12 @@
 		D3AFDDFC2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENDocumentReceiveCollectionViewCell.xib; sourceTree = "<group>"; };
 		D3AFDDFF2276EAE00033DB64 /* LENDocumentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENDocumentModel.h; sourceTree = "<group>"; };
 		D3AFDE002276EAE00033DB64 /* LENDocumentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENDocumentModel.m; sourceTree = "<group>"; };
+		D3BF54012280525100D15655 /* LENSquareGridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENSquareGridView.h; sourceTree = "<group>"; };
+		D3BF54022280525100D15655 /* LENSquareGridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENSquareGridView.m; sourceTree = "<group>"; };
+		D3BF54042280526000D15655 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D3BF54052280584100D15655 /* LENSquareGridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENSquareGridViewController.h; sourceTree = "<group>"; };
+		D3BF54062280584100D15655 /* LENSquareGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENSquareGridViewController.m; sourceTree = "<group>"; };
+		D3BF54072280584100D15655 /* LENSquareGridViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENSquareGridViewController.xib; sourceTree = "<group>"; };
 		D3CBF2C522486B9C00DECFC3 /* LedonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LedonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3CBF2C822486B9C00DECFC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3CBF2C922486B9C00DECFC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -142,6 +151,19 @@
 			path = DocumentReceive;
 			sourceTree = "<group>";
 		};
+		D3BF5400228051F100D15655 /* SquareGrid */ = {
+			isa = PBXGroup;
+			children = (
+				D3BF54012280525100D15655 /* LENSquareGridView.h */,
+				D3BF54022280525100D15655 /* LENSquareGridView.m */,
+				D3BF54052280584100D15655 /* LENSquareGridViewController.h */,
+				D3BF54062280584100D15655 /* LENSquareGridViewController.m */,
+				D3BF54072280584100D15655 /* LENSquareGridViewController.xib */,
+				D3BF54042280526000D15655 /* README.md */,
+			);
+			path = SquareGrid;
+			sourceTree = "<group>";
+		};
 		D3CBF2BC22486B9C00DECFC3 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +187,7 @@
 		D3CBF2C722486B9C00DECFC3 /* LedonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D3BF5400228051F100D15655 /* SquareGrid */,
 				D365E1442275379100D158D5 /* DocumentShare */,
 				D3AFDDEC2276CE670033DB64 /* DocumentReceive */,
 				D3CBF2C822486B9C00DECFC3 /* AppDelegate.h */,
@@ -310,6 +333,7 @@
 				D365E14B227538D300D158D5 /* DocumentShareTest.pdf in Resources */,
 				D3AFDDF42276D6210033DB64 /* LENDocumentReceiveViewController.xib in Resources */,
 				D365E149227537CD00D158D5 /* LENDocumentShareViewController.xib in Resources */,
+				D3BF54092280584100D15655 /* LENSquareGridViewController.xib in Resources */,
 				D3CBF2D022486B9C00DECFC3 /* Main.storyboard in Resources */,
 				D365E15222756E0800D158D5 /* DocumentShareTest2.MOV in Resources */,
 				D3CBF2FE22486BBB00DECFC3 /* MainViewController.xib in Resources */,
@@ -341,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3CBF2CD22486B9C00DECFC3 /* ViewController.m in Sources */,
+				D3BF54082280584100D15655 /* LENSquareGridViewController.m in Sources */,
 				D3AFDDF32276D6210033DB64 /* LENDocumentReceiveViewController.m in Sources */,
 				D3CBF2D822486B9C00DECFC3 /* main.m in Sources */,
 				D3CBF2CA22486B9C00DECFC3 /* AppDelegate.m in Sources */,
@@ -348,6 +373,7 @@
 				D365E148227537CD00D158D5 /* LENDocumentShareViewController.m in Sources */,
 				D3CBF2FD22486BBB00DECFC3 /* MainViewController.m in Sources */,
 				D3AFDDFD2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m in Sources */,
+				D3BF54032280525100D15655 /* LENSquareGridView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "LENDocumentShareViewController.h"
 #import "LENDocumentReceiveViewController.h"
+#import "LENSquareGridViewController.h"
 
 #define kStatusBarAndNavigationBarHeight (Is_Iphone_X) ? 88 : 64
 #define Is_Iphone_X kFullScreenHeight >= 812.0
@@ -28,14 +29,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.titles = @[@"文件分享与快速预览", @"接收文件分享"];
+    self.titles = @[@[@"文件分享与快速预览", @"接收文件分享"],@[@"方块网格选择"]];
     [self.view addSubview:self.baseTableView];
 }
 
 # pragma mark -- TableView
 - (UITableView *)baseTableView{
     if (!_baseTableView) {
-        _baseTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kStatusBarAndNavigationBarHeight, kFullScreenWidth, (kFullScreenHeight) - (kStatusBarAndNavigationBarHeight)) style:(UITableViewStylePlain)];
+        _baseTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kStatusBarAndNavigationBarHeight, kFullScreenWidth, (kFullScreenHeight) - (kStatusBarAndNavigationBarHeight)) style:(UITableViewStyleGrouped)];
         _baseTableView.delegate = self;
         _baseTableView.dataSource = self;
         [_baseTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"base"];
@@ -43,13 +44,19 @@
     return _baseTableView;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.titles.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSArray *array = self.titles[section];
+    return array.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"base"];
-    cell.textLabel.text = self.titles[indexPath.row];
+    NSArray *array = self.titles[indexPath.section];
+    cell.textLabel.text = array[indexPath.row];
     return cell;
 }
 
@@ -60,6 +67,9 @@
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.section == 0 && indexPath.row == 1) {
         LENDocumentReceiveViewController *vc = [LENDocumentReceiveViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.section == 1 && indexPath.row == 0) {
+        LENSquareGridViewController *vc = [LENSquareGridViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
