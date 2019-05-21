@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D321CD1C22941147000F3915 /* LENQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D321CD1A22941147000F3915 /* LENQRCodeScanViewController.m */; };
+		D321CD1D22941147000F3915 /* LENQRCodeScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D321CD1B22941147000F3915 /* LENQRCodeScanViewController.xib */; };
 		D365E148227537CD00D158D5 /* LENDocumentShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D365E146227537CD00D158D5 /* LENDocumentShareViewController.m */; };
 		D365E149227537CD00D158D5 /* LENDocumentShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D365E147227537CD00D158D5 /* LENDocumentShareViewController.xib */; };
 		D365E14B227538D300D158D5 /* DocumentShareTest.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D365E14A227538D300D158D5 /* DocumentShareTest.pdf */; };
@@ -31,6 +33,8 @@
 		D3CBF2ED22486B9C00DECFC3 /* LedonDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CBF2EC22486B9C00DECFC3 /* LedonDemoUITests.m */; };
 		D3CBF2FD22486BBB00DECFC3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CBF2FB22486BBB00DECFC3 /* MainViewController.m */; };
 		D3CBF2FE22486BBB00DECFC3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CBF2FC22486BBB00DECFC3 /* MainViewController.xib */; };
+		D3FC09A32293F4DD008B63A4 /* LENQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC09A12293F4DD008B63A4 /* LENQRCodeViewController.m */; };
+		D3FC09A42293F4DD008B63A4 /* LENQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FC09A22293F4DD008B63A4 /* LENQRCodeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D321CD1922941147000F3915 /* LENQRCodeScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENQRCodeScanViewController.h; sourceTree = "<group>"; };
+		D321CD1A22941147000F3915 /* LENQRCodeScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENQRCodeScanViewController.m; sourceTree = "<group>"; };
+		D321CD1B22941147000F3915 /* LENQRCodeScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENQRCodeScanViewController.xib; sourceTree = "<group>"; };
 		D365E145227537CD00D158D5 /* LENDocumentShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENDocumentShareViewController.h; sourceTree = "<group>"; };
 		D365E146227537CD00D158D5 /* LENDocumentShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENDocumentShareViewController.m; sourceTree = "<group>"; };
 		D365E147227537CD00D158D5 /* LENDocumentShareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENDocumentShareViewController.xib; sourceTree = "<group>"; };
@@ -93,6 +100,10 @@
 		D3CBF2FA22486BBB00DECFC3 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		D3CBF2FB22486BBB00DECFC3 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D3CBF2FC22486BBB00DECFC3 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		D3FC099F2293F4B2008B63A4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D3FC09A02293F4DD008B63A4 /* LENQRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENQRCodeViewController.h; sourceTree = "<group>"; };
+		D3FC09A12293F4DD008B63A4 /* LENQRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENQRCodeViewController.m; sourceTree = "<group>"; };
+		D3FC09A22293F4DD008B63A4 /* LENQRCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENQRCodeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +198,7 @@
 		D3CBF2C722486B9C00DECFC3 /* LedonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D3FC099B2293F48E008B63A4 /* QRCode */,
 				D3BF5400228051F100D15655 /* SquareGrid */,
 				D365E1442275379100D158D5 /* DocumentShare */,
 				D3AFDDEC2276CE670033DB64 /* DocumentReceive */,
@@ -222,6 +234,20 @@
 				D3CBF2EE22486B9C00DECFC3 /* Info.plist */,
 			);
 			path = LedonDemoUITests;
+			sourceTree = "<group>";
+		};
+		D3FC099B2293F48E008B63A4 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC099F2293F4B2008B63A4 /* README.md */,
+				D3FC09A02293F4DD008B63A4 /* LENQRCodeViewController.h */,
+				D3FC09A12293F4DD008B63A4 /* LENQRCodeViewController.m */,
+				D3FC09A22293F4DD008B63A4 /* LENQRCodeViewController.xib */,
+				D321CD1922941147000F3915 /* LENQRCodeScanViewController.h */,
+				D321CD1A22941147000F3915 /* LENQRCodeScanViewController.m */,
+				D321CD1B22941147000F3915 /* LENQRCodeScanViewController.xib */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,9 +359,11 @@
 				D365E14B227538D300D158D5 /* DocumentShareTest.pdf in Resources */,
 				D3AFDDF42276D6210033DB64 /* LENDocumentReceiveViewController.xib in Resources */,
 				D365E149227537CD00D158D5 /* LENDocumentShareViewController.xib in Resources */,
+				D3FC09A42293F4DD008B63A4 /* LENQRCodeViewController.xib in Resources */,
 				D3BF54092280584100D15655 /* LENSquareGridViewController.xib in Resources */,
 				D3CBF2D022486B9C00DECFC3 /* Main.storyboard in Resources */,
 				D365E15222756E0800D158D5 /* DocumentShareTest2.MOV in Resources */,
+				D321CD1D22941147000F3915 /* LENQRCodeScanViewController.xib in Resources */,
 				D3CBF2FE22486BBB00DECFC3 /* MainViewController.xib in Resources */,
 				D365E14E227569FE00D158D5 /* DocumentShareTest.jpeg in Resources */,
 				D3AFDDFE2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.xib in Resources */,
@@ -372,6 +400,8 @@
 				D3AFDE012276EAE00033DB64 /* LENDocumentModel.m in Sources */,
 				D365E148227537CD00D158D5 /* LENDocumentShareViewController.m in Sources */,
 				D3CBF2FD22486BBB00DECFC3 /* MainViewController.m in Sources */,
+				D3FC09A32293F4DD008B63A4 /* LENQRCodeViewController.m in Sources */,
+				D321CD1C22941147000F3915 /* LENQRCodeScanViewController.m in Sources */,
 				D3AFDDFD2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m in Sources */,
 				D3BF54032280525100D15655 /* LENSquareGridView.m in Sources */,
 			);
