@@ -15,6 +15,8 @@
 		D365E14E227569FE00D158D5 /* DocumentShareTest.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D365E14D227569FE00D158D5 /* DocumentShareTest.jpeg */; };
 		D365E15022756CD200D158D5 /* DocumentShareTest.MOV in Resources */ = {isa = PBXBuildFile; fileRef = D365E14F22756CD200D158D5 /* DocumentShareTest.MOV */; };
 		D365E15222756E0800D158D5 /* DocumentShareTest2.MOV in Resources */ = {isa = PBXBuildFile; fileRef = D365E15122756E0800D158D5 /* DocumentShareTest2.MOV */; };
+		D380DD6522A544F800BEBAA0 /* LENNotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D380DD6322A544F800BEBAA0 /* LENNotificationsViewController.m */; };
+		D380DD6622A544F800BEBAA0 /* LENNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D380DD6422A544F800BEBAA0 /* LENNotificationsViewController.xib */; };
 		D3AFDDF32276D6210033DB64 /* LENDocumentReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDDF12276D6210033DB64 /* LENDocumentReceiveViewController.m */; };
 		D3AFDDF42276D6210033DB64 /* LENDocumentReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AFDDF22276D6210033DB64 /* LENDocumentReceiveViewController.xib */; };
 		D3AFDDFD2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDDFB2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m */; };
@@ -66,6 +68,10 @@
 		D365E14D227569FE00D158D5 /* DocumentShareTest.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DocumentShareTest.jpeg; sourceTree = "<group>"; };
 		D365E14F22756CD200D158D5 /* DocumentShareTest.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = DocumentShareTest.MOV; sourceTree = "<group>"; };
 		D365E15122756E0800D158D5 /* DocumentShareTest2.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = DocumentShareTest2.MOV; sourceTree = "<group>"; };
+		D380DD6222A544F800BEBAA0 /* LENNotificationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENNotificationsViewController.h; sourceTree = "<group>"; };
+		D380DD6322A544F800BEBAA0 /* LENNotificationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENNotificationsViewController.m; sourceTree = "<group>"; };
+		D380DD6422A544F800BEBAA0 /* LENNotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENNotificationsViewController.xib; sourceTree = "<group>"; };
+		D380DD6722A5451C00BEBAA0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3AFDDEF2276CEAD0033DB64 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3AFDDF02276D6210033DB64 /* LENDocumentReceiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENDocumentReceiveViewController.h; sourceTree = "<group>"; };
 		D3AFDDF12276D6210033DB64 /* LENDocumentReceiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENDocumentReceiveViewController.m; sourceTree = "<group>"; };
@@ -146,6 +152,17 @@
 			path = DocumentShare;
 			sourceTree = "<group>";
 		};
+		D380DD6022A544A200BEBAA0 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				D380DD6222A544F800BEBAA0 /* LENNotificationsViewController.h */,
+				D380DD6322A544F800BEBAA0 /* LENNotificationsViewController.m */,
+				D380DD6422A544F800BEBAA0 /* LENNotificationsViewController.xib */,
+				D380DD6722A5451C00BEBAA0 /* README.md */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		D3AFDDEC2276CE670033DB64 /* DocumentReceive */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +219,7 @@
 				D3BF5400228051F100D15655 /* SquareGrid */,
 				D365E1442275379100D158D5 /* DocumentShare */,
 				D3AFDDEC2276CE670033DB64 /* DocumentReceive */,
+				D380DD6022A544A200BEBAA0 /* Notifications */,
 				D3CBF2C822486B9C00DECFC3 /* AppDelegate.h */,
 				D3CBF2C922486B9C00DECFC3 /* AppDelegate.m */,
 				D3CBF2CB22486B9C00DECFC3 /* ViewController.h */,
@@ -363,6 +381,7 @@
 				D3BF54092280584100D15655 /* LENSquareGridViewController.xib in Resources */,
 				D3CBF2D022486B9C00DECFC3 /* Main.storyboard in Resources */,
 				D365E15222756E0800D158D5 /* DocumentShareTest2.MOV in Resources */,
+				D380DD6622A544F800BEBAA0 /* LENNotificationsViewController.xib in Resources */,
 				D321CD1D22941147000F3915 /* LENQRCodeScanViewController.xib in Resources */,
 				D3CBF2FE22486BBB00DECFC3 /* MainViewController.xib in Resources */,
 				D365E14E227569FE00D158D5 /* DocumentShareTest.jpeg in Resources */,
@@ -392,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D380DD6522A544F800BEBAA0 /* LENNotificationsViewController.m in Sources */,
 				D3CBF2CD22486B9C00DECFC3 /* ViewController.m in Sources */,
 				D3BF54082280584100D15655 /* LENSquareGridViewController.m in Sources */,
 				D3AFDDF32276D6210033DB64 /* LENDocumentReceiveViewController.m in Sources */,
