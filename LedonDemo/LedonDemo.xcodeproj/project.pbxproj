@@ -17,6 +17,9 @@
 		D365E15222756E0800D158D5 /* DocumentShareTest2.MOV in Resources */ = {isa = PBXBuildFile; fileRef = D365E15122756E0800D158D5 /* DocumentShareTest2.MOV */; };
 		D380DD6522A544F800BEBAA0 /* LENNotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D380DD6322A544F800BEBAA0 /* LENNotificationsViewController.m */; };
 		D380DD6622A544F800BEBAA0 /* LENNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D380DD6422A544F800BEBAA0 /* LENNotificationsViewController.xib */; };
+		D380DD6D22A54E8800BEBAA0 /* LENCycleProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D380DD6B22A54E8800BEBAA0 /* LENCycleProgressViewController.m */; };
+		D380DD6E22A54E8800BEBAA0 /* LENCycleProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D380DD6C22A54E8800BEBAA0 /* LENCycleProgressViewController.xib */; };
+		D380DD7122A550A200BEBAA0 /* LENCycleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D380DD7022A550A200BEBAA0 /* LENCycleProgressView.m */; };
 		D3AFDDF32276D6210033DB64 /* LENDocumentReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDDF12276D6210033DB64 /* LENDocumentReceiveViewController.m */; };
 		D3AFDDF42276D6210033DB64 /* LENDocumentReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AFDDF22276D6210033DB64 /* LENDocumentReceiveViewController.xib */; };
 		D3AFDDFD2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDDFB2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m */; };
@@ -72,6 +75,12 @@
 		D380DD6322A544F800BEBAA0 /* LENNotificationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENNotificationsViewController.m; sourceTree = "<group>"; };
 		D380DD6422A544F800BEBAA0 /* LENNotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENNotificationsViewController.xib; sourceTree = "<group>"; };
 		D380DD6722A5451C00BEBAA0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D380DD6A22A54E8800BEBAA0 /* LENCycleProgressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENCycleProgressViewController.h; sourceTree = "<group>"; };
+		D380DD6B22A54E8800BEBAA0 /* LENCycleProgressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENCycleProgressViewController.m; sourceTree = "<group>"; };
+		D380DD6C22A54E8800BEBAA0 /* LENCycleProgressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENCycleProgressViewController.xib; sourceTree = "<group>"; };
+		D380DD6F22A550A200BEBAA0 /* LENCycleProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENCycleProgressView.h; sourceTree = "<group>"; };
+		D380DD7022A550A200BEBAA0 /* LENCycleProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENCycleProgressView.m; sourceTree = "<group>"; };
+		D380DD7222A6372000BEBAA0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3AFDDEF2276CEAD0033DB64 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3AFDDF02276D6210033DB64 /* LENDocumentReceiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENDocumentReceiveViewController.h; sourceTree = "<group>"; };
 		D3AFDDF12276D6210033DB64 /* LENDocumentReceiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENDocumentReceiveViewController.m; sourceTree = "<group>"; };
@@ -163,6 +172,19 @@
 			path = Notifications;
 			sourceTree = "<group>";
 		};
+		D380DD6922A54E6300BEBAA0 /* CycleProgress */ = {
+			isa = PBXGroup;
+			children = (
+				D380DD6A22A54E8800BEBAA0 /* LENCycleProgressViewController.h */,
+				D380DD6B22A54E8800BEBAA0 /* LENCycleProgressViewController.m */,
+				D380DD6C22A54E8800BEBAA0 /* LENCycleProgressViewController.xib */,
+				D380DD6F22A550A200BEBAA0 /* LENCycleProgressView.h */,
+				D380DD7022A550A200BEBAA0 /* LENCycleProgressView.m */,
+				D380DD7222A6372000BEBAA0 /* README.md */,
+			);
+			path = CycleProgress;
+			sourceTree = "<group>";
+		};
 		D3AFDDEC2276CE670033DB64 /* DocumentReceive */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +237,7 @@
 		D3CBF2C722486B9C00DECFC3 /* LedonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D380DD6922A54E6300BEBAA0 /* CycleProgress */,
 				D3FC099B2293F48E008B63A4 /* QRCode */,
 				D3BF5400228051F100D15655 /* SquareGrid */,
 				D365E1442275379100D158D5 /* DocumentShare */,
@@ -386,6 +409,7 @@
 				D3CBF2FE22486BBB00DECFC3 /* MainViewController.xib in Resources */,
 				D365E14E227569FE00D158D5 /* DocumentShareTest.jpeg in Resources */,
 				D3AFDDFE2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.xib in Resources */,
+				D380DD6E22A54E8800BEBAA0 /* LENCycleProgressViewController.xib in Resources */,
 				D365E15022756CD200D158D5 /* DocumentShareTest.MOV in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,12 +437,14 @@
 			files = (
 				D380DD6522A544F800BEBAA0 /* LENNotificationsViewController.m in Sources */,
 				D3CBF2CD22486B9C00DECFC3 /* ViewController.m in Sources */,
+				D380DD7122A550A200BEBAA0 /* LENCycleProgressView.m in Sources */,
 				D3BF54082280584100D15655 /* LENSquareGridViewController.m in Sources */,
 				D3AFDDF32276D6210033DB64 /* LENDocumentReceiveViewController.m in Sources */,
 				D3CBF2D822486B9C00DECFC3 /* main.m in Sources */,
 				D3CBF2CA22486B9C00DECFC3 /* AppDelegate.m in Sources */,
 				D3AFDE012276EAE00033DB64 /* LENDocumentModel.m in Sources */,
 				D365E148227537CD00D158D5 /* LENDocumentShareViewController.m in Sources */,
+				D380DD6D22A54E8800BEBAA0 /* LENCycleProgressViewController.m in Sources */,
 				D3CBF2FD22486BBB00DECFC3 /* MainViewController.m in Sources */,
 				D3FC09A32293F4DD008B63A4 /* LENQRCodeViewController.m in Sources */,
 				D321CD1C22941147000F3915 /* LENQRCodeScanViewController.m in Sources */,
