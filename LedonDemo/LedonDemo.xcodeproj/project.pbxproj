@@ -38,6 +38,9 @@
 		D3CBF2ED22486B9C00DECFC3 /* LedonDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CBF2EC22486B9C00DECFC3 /* LedonDemoUITests.m */; };
 		D3CBF2FD22486BBB00DECFC3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CBF2FB22486BBB00DECFC3 /* MainViewController.m */; };
 		D3CBF2FE22486BBB00DECFC3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CBF2FC22486BBB00DECFC3 /* MainViewController.xib */; };
+		D3E58C9F22AF90D400FD678A /* StakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E58C9D22AF90D400FD678A /* StakeView.m */; };
+		D3E58CA322AF911D00FD678A /* LENDirectionControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E58CA122AF911D00FD678A /* LENDirectionControlViewController.m */; };
+		D3E58CA422AF911D00FD678A /* LENDirectionControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E58CA222AF911D00FD678A /* LENDirectionControlViewController.xib */; };
 		D3FC09A32293F4DD008B63A4 /* LENQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC09A12293F4DD008B63A4 /* LENQRCodeViewController.m */; };
 		D3FC09A42293F4DD008B63A4 /* LENQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FC09A22293F4DD008B63A4 /* LENQRCodeViewController.xib */; };
 /* End PBXBuildFile section */
@@ -115,6 +118,11 @@
 		D3CBF2FA22486BBB00DECFC3 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		D3CBF2FB22486BBB00DECFC3 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D3CBF2FC22486BBB00DECFC3 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		D3E58C9D22AF90D400FD678A /* StakeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StakeView.m; sourceTree = "<group>"; };
+		D3E58C9E22AF90D400FD678A /* StakeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StakeView.h; sourceTree = "<group>"; };
+		D3E58CA022AF911D00FD678A /* LENDirectionControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENDirectionControlViewController.h; sourceTree = "<group>"; };
+		D3E58CA122AF911D00FD678A /* LENDirectionControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENDirectionControlViewController.m; sourceTree = "<group>"; };
+		D3E58CA222AF911D00FD678A /* LENDirectionControlViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENDirectionControlViewController.xib; sourceTree = "<group>"; };
 		D3FC099F2293F4B2008B63A4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3FC09A02293F4DD008B63A4 /* LENQRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENQRCodeViewController.h; sourceTree = "<group>"; };
 		D3FC09A12293F4DD008B63A4 /* LENQRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENQRCodeViewController.m; sourceTree = "<group>"; };
@@ -237,6 +245,7 @@
 		D3CBF2C722486B9C00DECFC3 /* LedonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D3E58C9C22AF90B500FD678A /* DirectionControl */,
 				D380DD6922A54E6300BEBAA0 /* CycleProgress */,
 				D3FC099B2293F48E008B63A4 /* QRCode */,
 				D3BF5400228051F100D15655 /* SquareGrid */,
@@ -275,6 +284,18 @@
 				D3CBF2EE22486B9C00DECFC3 /* Info.plist */,
 			);
 			path = LedonDemoUITests;
+			sourceTree = "<group>";
+		};
+		D3E58C9C22AF90B500FD678A /* DirectionControl */ = {
+			isa = PBXGroup;
+			children = (
+				D3E58C9E22AF90D400FD678A /* StakeView.h */,
+				D3E58C9D22AF90D400FD678A /* StakeView.m */,
+				D3E58CA022AF911D00FD678A /* LENDirectionControlViewController.h */,
+				D3E58CA122AF911D00FD678A /* LENDirectionControlViewController.m */,
+				D3E58CA222AF911D00FD678A /* LENDirectionControlViewController.xib */,
+			);
+			path = DirectionControl;
 			sourceTree = "<group>";
 		};
 		D3FC099B2293F48E008B63A4 /* QRCode */ = {
@@ -403,6 +424,7 @@
 				D3FC09A42293F4DD008B63A4 /* LENQRCodeViewController.xib in Resources */,
 				D3BF54092280584100D15655 /* LENSquareGridViewController.xib in Resources */,
 				D3CBF2D022486B9C00DECFC3 /* Main.storyboard in Resources */,
+				D3E58CA422AF911D00FD678A /* LENDirectionControlViewController.xib in Resources */,
 				D365E15222756E0800D158D5 /* DocumentShareTest2.MOV in Resources */,
 				D380DD6622A544F800BEBAA0 /* LENNotificationsViewController.xib in Resources */,
 				D321CD1D22941147000F3915 /* LENQRCodeScanViewController.xib in Resources */,
@@ -444,6 +466,8 @@
 				D3CBF2CA22486B9C00DECFC3 /* AppDelegate.m in Sources */,
 				D3AFDE012276EAE00033DB64 /* LENDocumentModel.m in Sources */,
 				D365E148227537CD00D158D5 /* LENDocumentShareViewController.m in Sources */,
+				D3E58CA322AF911D00FD678A /* LENDirectionControlViewController.m in Sources */,
+				D3E58C9F22AF90D400FD678A /* StakeView.m in Sources */,
 				D380DD6D22A54E8800BEBAA0 /* LENCycleProgressViewController.m in Sources */,
 				D3CBF2FD22486BBB00DECFC3 /* MainViewController.m in Sources */,
 				D3FC09A32293F4DD008B63A4 /* LENQRCodeViewController.m in Sources */,
