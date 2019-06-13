@@ -9,6 +9,7 @@
 #import "LENSquareGridView.h"
 
 #define DefaultColor [UIColor redColor]
+#define OriginalColor [UIColor clearColor]
 @interface LENSquareGridView()
 
 @property (nonatomic, strong) NSMutableArray *nums; // 双重数组
@@ -20,6 +21,8 @@
 @property (nonatomic, assign) int horizontal;
 
 @property (nonatomic, assign) int vertical;
+
+@property (nonatomic, assign) BOOL eraserMode;
 
 @end
 
@@ -47,9 +50,9 @@
         for (int j = 0; j < self.horizontal; j++) {
             UIView *view = [UIView new];
             view.frame = CGRectMake(width * j, height * i, width, height);
-            view.backgroundColor = [UIColor clearColor];
+            view.backgroundColor = OriginalColor;
             view.layer.borderColor = [UIColor whiteColor].CGColor;
-            view.layer.borderWidth = 0.5;
+            view.layer.borderWidth = 0.3;
             view.tag = i * self.horizontal + j;
             [self addSubview:view];
             [self.views addObject:view];
@@ -91,14 +94,31 @@
     CGFloat height = self.frame.size.height / self.vertical;
     int xIndex = x / width;
     int yIndex = y / height;
+    if (xIndex >= self.horizontal - 1 || xIndex < 0) {
+        return;
+    }
+    if (yIndex >= self.vertical - 1 || yIndex < 0) {
+        return;
+    }
     int index = yIndex * self.horizontal + xIndex;
-    if ([self.indexs containsObject:@(index)]) {
-        
+    if (self.eraserMode) {
+        if ([self.indexs containsObject:@(index)]) {
+            UIView *view = self.views[index];
+            view.backgroundColor = OriginalColor;
+            self.views[index] = view;
+            [self.indexs removeObject:@(index)];
+        } else {
+            
+        }
     } else {
-        UIView *view = self.views[index];
-        view.backgroundColor = DefaultColor;
-        self.views[index] = view;
-        [self.indexs addObject:@(index)];
+        if ([self.indexs containsObject:@(index)]) {
+            
+        } else {
+            UIView *view = self.views[index];
+            view.backgroundColor = DefaultColor;
+            self.views[index] = view;
+            [self.indexs addObject:@(index)];
+        }
     }
 }
 
@@ -116,6 +136,16 @@
 # pragma mark -- 数据提交
 - (void)commit{
     NSLog(@"index = %@", self.indexs.description);
+}
+
+# pragma mark -- 闭合
+- (void)closure{
+    NSLog(@"开始闭合");
+}
+
+# pragma mark -- 开始橡皮擦模式/画笔模式
+- (void)eraser{
+    self.eraserMode = !self.eraserMode;
 }
 
 
