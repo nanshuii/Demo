@@ -7,9 +7,9 @@
 //
 
 #import "LENDirectionControlViewController.h"
-#import "StakeView.h"
+#import "LENCyleControlView.h"
 
-@interface LENDirectionControlViewController ()<StakeDelegate>
+@interface LENDirectionControlViewController ()
 
 @end
 
@@ -22,9 +22,8 @@
 }
 
 - (void)setUpUI{
-    StakeView *s = [[StakeView alloc] initWithFrame:CGRectMake(100, 200, 200, 200)];
-    s.delegate = self;
-    [self.view addSubview:s];
+    LENCyleControlView *control = [[LENCyleControlView alloc] initWithFrame:CGRectMake(0, 200, 400, 400)];
+    [self.view addSubview:control];
 }
 
 - (void)stakeDidChange:(CGPoint)offset{
