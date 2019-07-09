@@ -49,6 +49,9 @@
 		D3CBF2FE22486BBB00DECFC3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CBF2FC22486BBB00DECFC3 /* MainViewController.xib */; };
 		D3E58CA322AF911D00FD678A /* LENDirectionControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E58CA122AF911D00FD678A /* LENDirectionControlViewController.m */; };
 		D3E58CA422AF911D00FD678A /* LENDirectionControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E58CA222AF911D00FD678A /* LENDirectionControlViewController.xib */; };
+		D3ECE76022CF79B4009AD334 /* LENTurntableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ECE75E22CF79B4009AD334 /* LENTurntableViewController.m */; };
+		D3ECE76122CF79B4009AD334 /* LENTurntableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3ECE75F22CF79B4009AD334 /* LENTurntableViewController.xib */; };
+		D3ECE76422CF79D6009AD334 /* LENTurnTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ECE76322CF79D6009AD334 /* LENTurnTableView.m */; };
 		D3FC09A32293F4DD008B63A4 /* LENQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC09A12293F4DD008B63A4 /* LENQRCodeViewController.m */; };
 		D3FC09A42293F4DD008B63A4 /* LENQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FC09A22293F4DD008B63A4 /* LENQRCodeViewController.xib */; };
 /* End PBXBuildFile section */
@@ -149,6 +152,12 @@
 		D3E58CA022AF911D00FD678A /* LENDirectionControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENDirectionControlViewController.h; sourceTree = "<group>"; };
 		D3E58CA122AF911D00FD678A /* LENDirectionControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENDirectionControlViewController.m; sourceTree = "<group>"; };
 		D3E58CA222AF911D00FD678A /* LENDirectionControlViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENDirectionControlViewController.xib; sourceTree = "<group>"; };
+		D3ECE75D22CF79B4009AD334 /* LENTurntableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENTurntableViewController.h; sourceTree = "<group>"; };
+		D3ECE75E22CF79B4009AD334 /* LENTurntableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENTurntableViewController.m; sourceTree = "<group>"; };
+		D3ECE75F22CF79B4009AD334 /* LENTurntableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENTurntableViewController.xib; sourceTree = "<group>"; };
+		D3ECE76222CF79D6009AD334 /* LENTurnTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENTurnTableView.h; sourceTree = "<group>"; };
+		D3ECE76322CF79D6009AD334 /* LENTurnTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENTurnTableView.m; sourceTree = "<group>"; };
+		D3ECE76522CF79DF009AD334 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3FC099F2293F4B2008B63A4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3FC09A02293F4DD008B63A4 /* LENQRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENQRCodeViewController.h; sourceTree = "<group>"; };
 		D3FC09A12293F4DD008B63A4 /* LENQRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENQRCodeViewController.m; sourceTree = "<group>"; };
@@ -311,6 +320,7 @@
 		D3CBF2C722486B9C00DECFC3 /* LedonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D3ECE75C22CF7565009AD334 /* Turntable */,
 				D36D9FD922CD9411009E69F6 /* EasyTableView */,
 				D3E58C9C22AF90B500FD678A /* DirectionControl */,
 				D380DD6922A54E6300BEBAA0 /* CycleProgress */,
@@ -364,6 +374,19 @@
 				D36D9FD822CD93C9009E69F6 /* README.md */,
 			);
 			path = DirectionControl;
+			sourceTree = "<group>";
+		};
+		D3ECE75C22CF7565009AD334 /* Turntable */ = {
+			isa = PBXGroup;
+			children = (
+				D3ECE75D22CF79B4009AD334 /* LENTurntableViewController.h */,
+				D3ECE75E22CF79B4009AD334 /* LENTurntableViewController.m */,
+				D3ECE75F22CF79B4009AD334 /* LENTurntableViewController.xib */,
+				D3ECE76222CF79D6009AD334 /* LENTurnTableView.h */,
+				D3ECE76322CF79D6009AD334 /* LENTurnTableView.m */,
+				D3ECE76522CF79DF009AD334 /* README.md */,
+			);
+			path = Turntable;
 			sourceTree = "<group>";
 		};
 		D3FC099B2293F48E008B63A4 /* QRCode */ = {
@@ -486,6 +509,7 @@
 			files = (
 				D3CBF2D522486B9C00DECFC3 /* LaunchScreen.storyboard in Resources */,
 				D3CBF2D222486B9C00DECFC3 /* Assets.xcassets in Resources */,
+				D3ECE76122CF79B4009AD334 /* LENTurntableViewController.xib in Resources */,
 				D365E14B227538D300D158D5 /* DocumentShareTest.pdf in Resources */,
 				D3AFDDF42276D6210033DB64 /* LENDocumentReceiveViewController.xib in Resources */,
 				D365E149227537CD00D158D5 /* LENDocumentShareViewController.xib in Resources */,
@@ -530,9 +554,11 @@
 				D380DD6522A544F800BEBAA0 /* LENNotificationsViewController.m in Sources */,
 				D3CBF2CD22486B9C00DECFC3 /* ViewController.m in Sources */,
 				D31E0C2222CDD67E00D3CA51 /* LENEasyTableViewModel.m in Sources */,
+				D3ECE76422CF79D6009AD334 /* LENTurnTableView.m in Sources */,
 				D380DD7122A550A200BEBAA0 /* LENCycleProgressView.m in Sources */,
 				D3BF54082280584100D15655 /* LENSquareGridViewController.m in Sources */,
 				D3AFDDF32276D6210033DB64 /* LENDocumentReceiveViewController.m in Sources */,
+				D3ECE76022CF79B4009AD334 /* LENTurntableViewController.m in Sources */,
 				D3CBF2D822486B9C00DECFC3 /* main.m in Sources */,
 				D3CBF2CA22486B9C00DECFC3 /* AppDelegate.m in Sources */,
 				D31E0C2822CDD8C900D3CA51 /* LENEasyTableViewTextModel.m in Sources */,
