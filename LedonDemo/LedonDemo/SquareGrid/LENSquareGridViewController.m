@@ -21,7 +21,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"方块网格绘制";
-    self.sgView = [[LENSquareGridView alloc] initWithFrame:CGRectMake(0, 88, 414, 232) horizontal:20 vertical:20 nums:[NSMutableArray new]];
+    NSMutableArray *nums = [NSMutableArray arrayWithCapacity:400];
+    for (int i = 0; i < 400; i++) {
+        [nums addObject:@(0)];
+    }
+    nums[1] = @(1);
+    nums[10] = @(1);
+    nums[198] = @(1);
+    nums[398] = @(1);
+    nums[20] = @(1);
+    self.sgView = [[LENSquareGridView alloc] initWithFrame:CGRectMake(0, 88, 414, 232) horizontal:20 vertical:20 nums:nums];
     [self.view addSubview:self.sgView];
     
     UIButton *clearButton = [UIButton new];

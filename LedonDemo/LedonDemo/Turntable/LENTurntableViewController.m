@@ -25,11 +25,12 @@
 
 - (void)setUpUI{
     self.label.text = @"吃什么饭？";
-    self.turnTV = [[LENTurnTableView alloc] initWithFrame:CGRectMake(10, 0, self.contentView.frame.size.width - 20, self.contentView.frame.size.height - 20) titles:@[@"快餐", @"沙县", @"炒菜", @"兰州拉面", @"陕西面", @"扈四爷"] rates:@[@(4), @(2), @(2), @(2), @(1), @(1)]];
+    self.turnTV = [[LENTurnTableView alloc] initWithFrame:CGRectMake(10, 0, self.contentView.frame.size.width - 20, self.contentView.frame.size.height - 20) titles:@[@"快餐", @"沙县", @"炒菜", @"兰州拉面", @"陕西面", @"扈四爷"]];
     [self.turnTV setFoodBlock:^(NSString * _Nonnull title, int index) {
         self.label.text = title;
     }];
     [self.contentView addSubview:self.turnTV];
+    
 }
 
 - (IBAction)run:(id)sender {

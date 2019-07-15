@@ -29,6 +29,9 @@
 		D380DD6D22A54E8800BEBAA0 /* LENCycleProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D380DD6B22A54E8800BEBAA0 /* LENCycleProgressViewController.m */; };
 		D380DD6E22A54E8800BEBAA0 /* LENCycleProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D380DD6C22A54E8800BEBAA0 /* LENCycleProgressViewController.xib */; };
 		D380DD7122A550A200BEBAA0 /* LENCycleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D380DD7022A550A200BEBAA0 /* LENCycleProgressView.m */; };
+		D389A6A122D6C92F00890A87 /* LENColorSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D389A69F22D6C92F00890A87 /* LENColorSelectViewController.m */; };
+		D389A6A222D6C92F00890A87 /* LENColorSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D389A6A022D6C92F00890A87 /* LENColorSelectViewController.xib */; };
+		D389A6A522D6C97500890A87 /* LENColorSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D389A6A422D6C97500890A87 /* LENColorSelectView.m */; };
 		D3AFDDF32276D6210033DB64 /* LENDocumentReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDDF12276D6210033DB64 /* LENDocumentReceiveViewController.m */; };
 		D3AFDDF42276D6210033DB64 /* LENDocumentReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AFDDF22276D6210033DB64 /* LENDocumentReceiveViewController.xib */; };
 		D3AFDDFD2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDDFB2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m */; };
@@ -105,6 +108,7 @@
 		D36D9FDA22CD9434009E69F6 /* LENEasyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENEasyTableViewController.h; sourceTree = "<group>"; };
 		D36D9FDB22CD9434009E69F6 /* LENEasyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENEasyTableViewController.m; sourceTree = "<group>"; };
 		D36D9FDC22CD9435009E69F6 /* LENEasyTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENEasyTableViewController.xib; sourceTree = "<group>"; };
+		D37574E322D57F79000F6DD1 /* LENColorDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENColorDefine.h; sourceTree = "<group>"; };
 		D380DD6222A544F800BEBAA0 /* LENNotificationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENNotificationsViewController.h; sourceTree = "<group>"; };
 		D380DD6322A544F800BEBAA0 /* LENNotificationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENNotificationsViewController.m; sourceTree = "<group>"; };
 		D380DD6422A544F800BEBAA0 /* LENNotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENNotificationsViewController.xib; sourceTree = "<group>"; };
@@ -115,6 +119,11 @@
 		D380DD6F22A550A200BEBAA0 /* LENCycleProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENCycleProgressView.h; sourceTree = "<group>"; };
 		D380DD7022A550A200BEBAA0 /* LENCycleProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENCycleProgressView.m; sourceTree = "<group>"; };
 		D380DD7222A6372000BEBAA0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D389A69E22D6C92F00890A87 /* LENColorSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENColorSelectViewController.h; sourceTree = "<group>"; };
+		D389A69F22D6C92F00890A87 /* LENColorSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENColorSelectViewController.m; sourceTree = "<group>"; };
+		D389A6A022D6C92F00890A87 /* LENColorSelectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENColorSelectViewController.xib; sourceTree = "<group>"; };
+		D389A6A322D6C97500890A87 /* LENColorSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENColorSelectView.h; sourceTree = "<group>"; };
+		D389A6A422D6C97500890A87 /* LENColorSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENColorSelectView.m; sourceTree = "<group>"; };
 		D3AFDDEF2276CEAD0033DB64 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3AFDDF02276D6210033DB64 /* LENDocumentReceiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENDocumentReceiveViewController.h; sourceTree = "<group>"; };
 		D3AFDDF12276D6210033DB64 /* LENDocumentReceiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENDocumentReceiveViewController.m; sourceTree = "<group>"; };
@@ -268,6 +277,18 @@
 			path = CycleProgress;
 			sourceTree = "<group>";
 		};
+		D389A69D22D6C91400890A87 /* ColorSelect */ = {
+			isa = PBXGroup;
+			children = (
+				D389A69E22D6C92F00890A87 /* LENColorSelectViewController.h */,
+				D389A69F22D6C92F00890A87 /* LENColorSelectViewController.m */,
+				D389A6A022D6C92F00890A87 /* LENColorSelectViewController.xib */,
+				D389A6A322D6C97500890A87 /* LENColorSelectView.h */,
+				D389A6A422D6C97500890A87 /* LENColorSelectView.m */,
+			);
+			path = ColorSelect;
+			sourceTree = "<group>";
+		};
 		D3AFDDEC2276CE670033DB64 /* DocumentReceive */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +341,7 @@
 		D3CBF2C722486B9C00DECFC3 /* LedonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D389A69D22D6C91400890A87 /* ColorSelect */,
 				D3ECE75C22CF7565009AD334 /* Turntable */,
 				D36D9FD922CD9411009E69F6 /* EasyTableView */,
 				D3E58C9C22AF90B500FD678A /* DirectionControl */,
@@ -379,6 +401,7 @@
 		D3ECE75C22CF7565009AD334 /* Turntable */ = {
 			isa = PBXGroup;
 			children = (
+				D37574E322D57F79000F6DD1 /* LENColorDefine.h */,
 				D3ECE75D22CF79B4009AD334 /* LENTurntableViewController.h */,
 				D3ECE75E22CF79B4009AD334 /* LENTurntableViewController.m */,
 				D3ECE75F22CF79B4009AD334 /* LENTurntableViewController.xib */,
@@ -517,6 +540,7 @@
 				D3BF54092280584100D15655 /* LENSquareGridViewController.xib in Resources */,
 				D31E0C1522CDCD4C00D3CA51 /* LENEasyTableViewTextCell.xib in Resources */,
 				D3CBF2D022486B9C00DECFC3 /* Main.storyboard in Resources */,
+				D389A6A222D6C92F00890A87 /* LENColorSelectViewController.xib in Resources */,
 				D3E58CA422AF911D00FD678A /* LENDirectionControlViewController.xib in Resources */,
 				D365E15222756E0800D158D5 /* DocumentShareTest2.MOV in Resources */,
 				D380DD6622A544F800BEBAA0 /* LENNotificationsViewController.xib in Resources */,
@@ -569,6 +593,7 @@
 				D380DD6D22A54E8800BEBAA0 /* LENCycleProgressViewController.m in Sources */,
 				D3CBF2FD22486BBB00DECFC3 /* MainViewController.m in Sources */,
 				D3FC09A32293F4DD008B63A4 /* LENQRCodeViewController.m in Sources */,
+				D389A6A122D6C92F00890A87 /* LENColorSelectViewController.m in Sources */,
 				D321CD1C22941147000F3915 /* LENQRCodeScanViewController.m in Sources */,
 				D31E0C1822CDD11600D3CA51 /* UITableViewCell+LENEasy.m in Sources */,
 				D31E0C1022CDCC7C00D3CA51 /* UITableView+LENEasy.m in Sources */,
@@ -576,6 +601,7 @@
 				D3BF54032280525100D15655 /* LENSquareGridView.m in Sources */,
 				D31E0C1422CDCD4C00D3CA51 /* LENEasyTableViewTextCell.m in Sources */,
 				D36D9FDD22CD9435009E69F6 /* LENEasyTableViewController.m in Sources */,
+				D389A6A522D6C97500890A87 /* LENColorSelectView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

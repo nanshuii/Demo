@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  提交
  */
-- (void)commit;
+- (NSMutableArray *)commit;
 
 /**
  闭合选中的部分

@@ -54,6 +54,13 @@
             view.layer.borderColor = [UIColor whiteColor].CGColor;
             view.layer.borderWidth = 0.3;
             view.tag = i * self.horizontal + j;
+            int index = i * self.horizontal + j;
+            //
+            int number = [self.nums[index] intValue];
+            if (number == 1) {
+                [self.indexs addObject:@(index)];
+                view.backgroundColor = DefaultColor;
+            }
             [self addSubview:view];
             [self.views addObject:view];
         }
@@ -94,10 +101,10 @@
     CGFloat height = self.frame.size.height / self.vertical;
     int xIndex = x / width;
     int yIndex = y / height;
-    if (xIndex >= self.horizontal - 1 || xIndex < 0) {
+    if (xIndex >= self.horizontal || xIndex < 0) {
         return;
     }
-    if (yIndex >= self.vertical - 1 || yIndex < 0) {
+    if (yIndex >= self.vertical || yIndex < 0) {
         return;
     }
     int index = yIndex * self.horizontal + xIndex;
@@ -134,8 +141,9 @@
 }
 
 # pragma mark -- 数据提交
-- (void)commit{
+- (NSMutableArray *)commit{
     NSLog(@"index = %@", self.indexs.description);
+    return self.indexs;
 }
 
 # pragma mark -- 闭合
