@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) NSMutableArray *indexs;
 
+@property (nonatomic, strong) NSMutableArray *tempIndexs;
+
 @property (nonatomic, assign) int horizontal;
 
 @property (nonatomic, assign) int vertical;
@@ -69,6 +71,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     NSLog(@"touch begin");
+    self.tempIndexs = [NSMutableArray array];
     for (UITouch *touch in touches) {
         CGPoint point = [touch locationInView:self];
         NSLog(@"x = %f y = %f", point.x, point.y);
@@ -83,6 +86,8 @@
         NSLog(@"x = %f y = %f", point.x, point.y);
         [self calForPoint:point];
     }
+    // 结算这次的区域
+    [self closure];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -125,6 +130,89 @@
             view.backgroundColor = DefaultColor;
             self.views[index] = view;
             [self.indexs addObject:@(index)];
+            [self.tempIndexs addObject:@(index)];
+        }
+    }
+}
+
+# pragma mark -- 闭合
+- (void)closure{
+    NSLog(@"开始闭合");
+    int lastIndex = -1;
+    int lastIndexMax = -1;
+    int lastHorizontal = -1;
+    int tempHorizontal = -1;
+    int horizontal = -1;
+    int n = 0;
+    [self.tempIndexs sortUsingComparator:^NSComparisonResult(NSNumber *obj1, NSNumber *obj2) {
+        if ([obj1 intValue] < [obj2 intValue]) {
+            return NSOrderedAscending;
+        } else {
+            return NSOrderedDescending;
+        }
+    }];
+    if (self.tempIndexs.count > 0) {
+        for (NSNumber *number in self.tempIndexs) {
+            int index = [number intValue];
+            horizontal = (index) / self.horizontal;
+            if (lastIndex == -1 || lastHorizontal == -1 || lastIndexMax == -1) {
+                lastIndex = index;
+                lastHorizontal = horizontal;
+                lastIndexMax = index;
+            } else {
+                NSLog(@"horizontal = %i last horizontal = %i", horizontal, lastHorizontal);
+                if (lastHorizontal == horizontal) {
+                    // 同一行
+                    lastIndexMax = index;
+                    n += 1;
+                } else {
+                    // 不是同一行 判断是否一行有两个
+                    if (lastIndexMax - lastIndex > 1) {
+                        NSMutableArray *temp = [self tempIndexHorizontalCreate:lastIndex max:lastIndexMax];
+                        // 加入到数组中
+                        [self tempArrayInsertToIndexs:temp];
+                    }
+                    tempHorizontal = lastHorizontal;
+                    lastIndex = index;
+                    lastHorizontal = horizontal;
+                    n = 0;
+//                    lastIndexMax = index;
+                }
+            }
+        }
+    }
+    // 判断最后一行有几个
+    if (n >= 1) {
+        if (lastIndexMax - lastIndex > 1) {
+            NSMutableArray *temp = [self tempIndexHorizontalCreate:lastIndex max:lastIndexMax];
+            // 加入到数组中
+            [self tempArrayInsertToIndexs:temp];
+        }
+    }
+    
+    [self.tempIndexs removeAllObjects];
+}
+
+- (NSMutableArray *)tempIndexHorizontalCreate:(int)min max:(int)max{
+    NSMutableArray *array = [NSMutableArray array];
+    for (int i = 0; i < max - min - 1; i++) {
+        [array addObject:@(min+i+1)];
+    }
+    return array;
+}
+
+- (void)tempArrayInsertToIndexs:(NSMutableArray *)array{
+    NSLog(@"temps = %@", array.description);
+    for (NSNumber *number in array) {
+        if ([self.indexs containsObject:number]) {
+            
+        } else {
+            int index = [number intValue];
+            NSLog(@"insert temp = %i", index);
+            UIView *view = self.views[index];
+            view.backgroundColor = DefaultColor;
+            self.views[index] = view;
+            [self.indexs addObject:number];
         }
     }
 }
@@ -146,10 +234,7 @@
     return self.indexs;
 }
 
-# pragma mark -- 闭合
-- (void)closure{
-    NSLog(@"开始闭合");
-}
+
 
 # pragma mark -- 开始橡皮擦模式/画笔模式
 - (void)eraser{
