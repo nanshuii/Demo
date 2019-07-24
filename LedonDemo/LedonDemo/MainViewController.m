@@ -104,6 +104,7 @@
         LENEasyTableViewController *vc = [LENEasyTableViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
+    
 }
 
 

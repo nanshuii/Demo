@@ -8,3 +8,8 @@
 ## 6. 环形加载圈
 ## 7. 转盘
 ## 8. 简单TableView--设置
+
+一些功能点
+## LENFunctionWifi
+获取当前wifi的ssid
+获取当前wifi的ip
