@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		019BC4E553C35149CF866575 /* libPods-LedonDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CE7ACE0015F7BBB384C0D2 /* libPods-LedonDemo.a */; };
 		D31E0C1022CDCC7C00D3CA51 /* UITableView+LENEasy.m in Sources */ = {isa = PBXBuildFile; fileRef = D31E0C0F22CDCC7C00D3CA51 /* UITableView+LENEasy.m */; };
 		D31E0C1422CDCD4C00D3CA51 /* LENEasyTableViewTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D31E0C1222CDCD4C00D3CA51 /* LENEasyTableViewTextCell.m */; };
 		D31E0C1522CDCD4C00D3CA51 /* LENEasyTableViewTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D31E0C1322CDCD4C00D3CA51 /* LENEasyTableViewTextCell.xib */; };
@@ -80,6 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B9CE7ACE0015F7BBB384C0D2 /* libPods-LedonDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LedonDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C582AAC34D41BA94BB7FC84E /* Pods-LedonDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LedonDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LedonDemo/Pods-LedonDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D31E0C0D22CDCC4900D3CA51 /* LENEasyTableViewCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENEasyTableViewCells.h; sourceTree = "<group>"; };
 		D31E0C0E22CDCC7C00D3CA51 /* UITableView+LENEasy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+LENEasy.h"; sourceTree = "<group>"; };
 		D31E0C0F22CDCC7C00D3CA51 /* UITableView+LENEasy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+LENEasy.m"; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 		D3FC2ADD22E838BD008E6E50 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3FC2AE022E8390D008E6E50 /* LENFunctionWifi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENFunctionWifi.h; sourceTree = "<group>"; };
 		D3FC2AE122E8390D008E6E50 /* LENFunctionWifi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENFunctionWifi.m; sourceTree = "<group>"; };
+		D99C01399CF7BB3C45FEDFBE /* Pods-LedonDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LedonDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LedonDemo/Pods-LedonDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019BC4E553C35149CF866575 /* libPods-LedonDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +210,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C6A3A0F718C42D88F022CA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9CE7ACE0015F7BBB384C0D2 /* libPods-LedonDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D365E1442275379100D158D5 /* DocumentShare */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +346,8 @@
 				D3CBF2E022486B9C00DECFC3 /* LedonDemoTests */,
 				D3CBF2EB22486B9C00DECFC3 /* LedonDemoUITests */,
 				D3CBF2C622486B9C00DECFC3 /* Products */,
+				E1D4CD422B29515489D58C9C /* Pods */,
+				5C6A3A0F718C42D88F022CA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -445,6 +460,15 @@
 			path = Functions;
 			sourceTree = "<group>";
 		};
+		E1D4CD422B29515489D58C9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D99C01399CF7BB3C45FEDFBE /* Pods-LedonDemo.debug.xcconfig */,
+				C582AAC34D41BA94BB7FC84E /* Pods-LedonDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -452,9 +476,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3CBF2F122486B9C00DECFC3 /* Build configuration list for PBXNativeTarget "LedonDemo" */;
 			buildPhases = (
+				C434B8490603697A3E5FD3E2 /* [CP] Check Pods Manifest.lock */,
 				D3CBF2C122486B9C00DECFC3 /* Sources */,
 				D3CBF2C222486B9C00DECFC3 /* Frameworks */,
 				D3CBF2C322486B9C00DECFC3 /* Resources */,
+				89A3EA8C25C54BEDB96C27A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -590,6 +616,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89A3EA8C25C54BEDB96C27A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LedonDemo/Pods-LedonDemo-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LedonDemo/Pods-LedonDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C434B8490603697A3E5FD3E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LedonDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3CBF2C122486B9C00DECFC3 /* Sources */ = {
@@ -792,6 +867,7 @@
 		};
 		D3CBF2F222486B9C00DECFC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D99C01399CF7BB3C45FEDFBE /* Pods-LedonDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -810,6 +886,7 @@
 		};
 		D3CBF2F322486B9C00DECFC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C582AAC34D41BA94BB7FC84E /* Pods-LedonDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
