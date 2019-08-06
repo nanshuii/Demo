@@ -39,6 +39,14 @@
 		D3AFDDFD2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDDFB2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m */; };
 		D3AFDDFE2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AFDDFC2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.xib */; };
 		D3AFDE012276EAE00033DB64 /* LENDocumentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDE002276EAE00033DB64 /* LENDocumentModel.m */; };
+		D3B8EC2D22F434CD00155415 /* LENMQTTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC2B22F434CD00155415 /* LENMQTTViewController.m */; };
+		D3B8EC2E22F434CD00155415 /* LENMQTTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B8EC2C22F434CD00155415 /* LENMQTTViewController.xib */; };
+		D3B8EC3222F436E200155415 /* LENMQTTClientModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC3122F436E200155415 /* LENMQTTClientModel.m */; };
+		D3B8EC3522F4396200155415 /* LENMQTTPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC3422F4396200155415 /* LENMQTTPackage.m */; };
+		D3B8EC3922F55A9300155415 /* LENWifiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC3822F55A9300155415 /* LENWifiManager.m */; };
+		D3B8EC3C22F55ADF00155415 /* LENReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC3B22F55ADF00155415 /* LENReachability.m */; };
+		D3B8EC3F22F5603500155415 /* LENNetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC3E22F5603500155415 /* LENNetworkUtil.m */; };
+		D3B8EC4222F5623C00155415 /* LENInstanceMQTTClientModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC4122F5623C00155415 /* LENInstanceMQTTClientModel.m */; };
 		D3BF54032280525100D15655 /* LENSquareGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BF54022280525100D15655 /* LENSquareGridView.m */; };
 		D3BF54082280584100D15655 /* LENSquareGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BF54062280584100D15655 /* LENSquareGridViewController.m */; };
 		D3BF54092280584100D15655 /* LENSquareGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BF54072280584100D15655 /* LENSquareGridViewController.xib */; };
@@ -140,6 +148,22 @@
 		D3AFDDFC2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENDocumentReceiveCollectionViewCell.xib; sourceTree = "<group>"; };
 		D3AFDDFF2276EAE00033DB64 /* LENDocumentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENDocumentModel.h; sourceTree = "<group>"; };
 		D3AFDE002276EAE00033DB64 /* LENDocumentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENDocumentModel.m; sourceTree = "<group>"; };
+		D3B8EC2A22F434CD00155415 /* LENMQTTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENMQTTViewController.h; sourceTree = "<group>"; };
+		D3B8EC2B22F434CD00155415 /* LENMQTTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENMQTTViewController.m; sourceTree = "<group>"; };
+		D3B8EC2C22F434CD00155415 /* LENMQTTViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENMQTTViewController.xib; sourceTree = "<group>"; };
+		D3B8EC2F22F4365500155415 /* LENMQTTServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENMQTTServer.h; sourceTree = "<group>"; };
+		D3B8EC3022F436E200155415 /* LENMQTTClientModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENMQTTClientModel.h; sourceTree = "<group>"; };
+		D3B8EC3122F436E200155415 /* LENMQTTClientModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENMQTTClientModel.m; sourceTree = "<group>"; };
+		D3B8EC3322F4396200155415 /* LENMQTTPackage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENMQTTPackage.h; sourceTree = "<group>"; };
+		D3B8EC3422F4396200155415 /* LENMQTTPackage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENMQTTPackage.m; sourceTree = "<group>"; };
+		D3B8EC3722F55A9300155415 /* LENWifiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENWifiManager.h; sourceTree = "<group>"; };
+		D3B8EC3822F55A9300155415 /* LENWifiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENWifiManager.m; sourceTree = "<group>"; };
+		D3B8EC3A22F55ADF00155415 /* LENReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENReachability.h; sourceTree = "<group>"; };
+		D3B8EC3B22F55ADF00155415 /* LENReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENReachability.m; sourceTree = "<group>"; };
+		D3B8EC3D22F5603500155415 /* LENNetworkUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENNetworkUtil.h; sourceTree = "<group>"; };
+		D3B8EC3E22F5603500155415 /* LENNetworkUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENNetworkUtil.m; sourceTree = "<group>"; };
+		D3B8EC4022F5623C00155415 /* LENInstanceMQTTClientModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENInstanceMQTTClientModel.h; sourceTree = "<group>"; };
+		D3B8EC4122F5623C00155415 /* LENInstanceMQTTClientModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENInstanceMQTTClientModel.m; sourceTree = "<group>"; };
 		D3BF54012280525100D15655 /* LENSquareGridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENSquareGridView.h; sourceTree = "<group>"; };
 		D3BF54022280525100D15655 /* LENSquareGridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENSquareGridView.m; sourceTree = "<group>"; };
 		D3BF54042280526000D15655 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -325,6 +349,36 @@
 			path = DocumentReceive;
 			sourceTree = "<group>";
 		};
+		D3B8EC2922F434A500155415 /* MQTT */ = {
+			isa = PBXGroup;
+			children = (
+				D3B8EC2A22F434CD00155415 /* LENMQTTViewController.h */,
+				D3B8EC2B22F434CD00155415 /* LENMQTTViewController.m */,
+				D3B8EC2C22F434CD00155415 /* LENMQTTViewController.xib */,
+				D3B8EC2F22F4365500155415 /* LENMQTTServer.h */,
+				D3B8EC3022F436E200155415 /* LENMQTTClientModel.h */,
+				D3B8EC3122F436E200155415 /* LENMQTTClientModel.m */,
+				D3B8EC3322F4396200155415 /* LENMQTTPackage.h */,
+				D3B8EC3422F4396200155415 /* LENMQTTPackage.m */,
+				D3B8EC4022F5623C00155415 /* LENInstanceMQTTClientModel.h */,
+				D3B8EC4122F5623C00155415 /* LENInstanceMQTTClientModel.m */,
+			);
+			path = MQTT;
+			sourceTree = "<group>";
+		};
+		D3B8EC3622F55A7500155415 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D3B8EC3722F55A9300155415 /* LENWifiManager.h */,
+				D3B8EC3822F55A9300155415 /* LENWifiManager.m */,
+				D3B8EC3A22F55ADF00155415 /* LENReachability.h */,
+				D3B8EC3B22F55ADF00155415 /* LENReachability.m */,
+				D3B8EC3D22F5603500155415 /* LENNetworkUtil.h */,
+				D3B8EC3E22F5603500155415 /* LENNetworkUtil.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		D3BF5400228051F100D15655 /* SquareGrid */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +418,8 @@
 		D3CBF2C722486B9C00DECFC3 /* LedonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D3B8EC3622F55A7500155415 /* Network */,
+				D3B8EC2922F434A500155415 /* MQTT */,
 				D3FC2ADF22E838DB008E6E50 /* Functions */,
 				D389A69D22D6C91400890A87 /* ColorSelect */,
 				D3ECE75C22CF7565009AD334 /* Turntable */,
@@ -581,6 +637,7 @@
 				D3ECE76122CF79B4009AD334 /* LENTurntableViewController.xib in Resources */,
 				D365E14B227538D300D158D5 /* DocumentShareTest.pdf in Resources */,
 				D3AFDDF42276D6210033DB64 /* LENDocumentReceiveViewController.xib in Resources */,
+				D3B8EC2E22F434CD00155415 /* LENMQTTViewController.xib in Resources */,
 				D365E149227537CD00D158D5 /* LENDocumentShareViewController.xib in Resources */,
 				D3FC09A42293F4DD008B63A4 /* LENQRCodeViewController.xib in Resources */,
 				D3FC2ADE22E838BE008E6E50 /* README.md in Resources */,
@@ -679,6 +736,7 @@
 				D3BF54082280584100D15655 /* LENSquareGridViewController.m in Sources */,
 				D3AFDDF32276D6210033DB64 /* LENDocumentReceiveViewController.m in Sources */,
 				D3ECE76022CF79B4009AD334 /* LENTurntableViewController.m in Sources */,
+				D3B8EC3C22F55ADF00155415 /* LENReachability.m in Sources */,
 				D3CBF2D822486B9C00DECFC3 /* main.m in Sources */,
 				D3CBF2CA22486B9C00DECFC3 /* AppDelegate.m in Sources */,
 				D31E0C2822CDD8C900D3CA51 /* LENEasyTableViewTextModel.m in Sources */,
@@ -687,13 +745,19 @@
 				D3E58CA322AF911D00FD678A /* LENDirectionControlViewController.m in Sources */,
 				D34EA81122C9CD8D000E9998 /* LENCyleControlView.m in Sources */,
 				D380DD6D22A54E8800BEBAA0 /* LENCycleProgressViewController.m in Sources */,
+				D3B8EC4222F5623C00155415 /* LENInstanceMQTTClientModel.m in Sources */,
+				D3B8EC2D22F434CD00155415 /* LENMQTTViewController.m in Sources */,
 				D3CBF2FD22486BBB00DECFC3 /* MainViewController.m in Sources */,
 				D3FC09A32293F4DD008B63A4 /* LENQRCodeViewController.m in Sources */,
+				D3B8EC3F22F5603500155415 /* LENNetworkUtil.m in Sources */,
 				D389A6A122D6C92F00890A87 /* LENColorSelectViewController.m in Sources */,
+				D3B8EC3922F55A9300155415 /* LENWifiManager.m in Sources */,
 				D321CD1C22941147000F3915 /* LENQRCodeScanViewController.m in Sources */,
 				D3FC2AE222E8390D008E6E50 /* LENFunctionWifi.m in Sources */,
 				D31E0C1822CDD11600D3CA51 /* UITableViewCell+LENEasy.m in Sources */,
+				D3B8EC3522F4396200155415 /* LENMQTTPackage.m in Sources */,
 				D31E0C1022CDCC7C00D3CA51 /* UITableView+LENEasy.m in Sources */,
+				D3B8EC3222F436E200155415 /* LENMQTTClientModel.m in Sources */,
 				D3AFDDFD2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m in Sources */,
 				D3BF54032280525100D15655 /* LENSquareGridView.m in Sources */,
 				D31E0C1422CDCD4C00D3CA51 /* LENEasyTableViewTextCell.m in Sources */,
