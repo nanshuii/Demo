@@ -16,9 +16,9 @@
 
 
 
-static NSString *const AddressOfMQTTServer      = @"xxx.xx.xxx";  // MQTT服务器地址
-static UInt16   const PortOfMQTTServer          = 000000;  // MQTT服务器端口
-static UInt16   const PortOfMQTTServerWithSSL          = 000;  // MQTT服务器端口
+static NSString *const AddressOfMQTTServer      = @"172.16.6.108";  // MQTT服务器地址
+static UInt16   const PortOfMQTTServer          = 1883;  // MQTT服务器端口
+static UInt16   const PortOfMQTTServerWithSSL          = 1883;  // MQTT服务器端口
 
 
 static UInt16 const DefaultDeviceAuthor         = 0x0000; // 设备默认授权码

@@ -28,10 +28,13 @@
 #pragma mark - 绑定
 - (void)bindWithUserName:(NSString *)username password:(NSString *)password epoch:(long long)epoch {
     
-    NSString *usernameMQTT = [NSString stringWithFormat:@"a:rinnai:SR:01:SR:%@",username];
-    NSString *cliendId = [NSString stringWithFormat:@"a:rinnai:SR:01:SR:%@:%lld",username,epoch];
+//    NSString *usernameMQTT = [NSString stringWithFormat:@"a:rinnai:SR:01:SR:%@",username];
+//    NSString *cliendId = [NSString stringWithFormat:@"a:rinnai:SR:01:SR:%@:%lld",username,epoch];
     
-    [LENMQTTClientModelStance bindWithUserName:usernameMQTT password:password cliendId:cliendId isSSL:YES];
+//    NSString *clientId = @"tcp://172.16.6.108:1883";
+    NSString *clientId = @"ac100795cfda5d4910cbiiio";
+    
+    [LENMQTTClientModelStance bindWithUserName:username password:password cliendId:clientId isSSL:NO];
     
 }
 

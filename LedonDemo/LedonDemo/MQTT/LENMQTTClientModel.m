@@ -90,6 +90,7 @@
     self.cliendId = cliendId;
     self.isSSL = isSSL;
     
+    NSLog(@"-- port -- %i", self.isSSL?PortOfMQTTServerWithSSL:PortOfMQTTServer);
     [self.mySessionManager connectTo:AddressOfMQTTServer
                                 port:self.isSSL?PortOfMQTTServerWithSSL:PortOfMQTTServer
                                  tls:self.isSSL
