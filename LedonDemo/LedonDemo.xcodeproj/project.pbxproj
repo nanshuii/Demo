@@ -47,6 +47,9 @@
 		D3B8EC3C22F55ADF00155415 /* LENReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC3B22F55ADF00155415 /* LENReachability.m */; };
 		D3B8EC3F22F5603500155415 /* LENNetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC3E22F5603500155415 /* LENNetworkUtil.m */; };
 		D3B8EC4222F5623C00155415 /* LENInstanceMQTTClientModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC4122F5623C00155415 /* LENInstanceMQTTClientModel.m */; };
+		D3B8EC4722F9119D00155415 /* LENBluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC4522F9119D00155415 /* LENBluetoothViewController.m */; };
+		D3B8EC4822F9119D00155415 /* LENBluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B8EC4622F9119D00155415 /* LENBluetoothViewController.xib */; };
+		D3B8EC4A22F9121100155415 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B8EC4922F9121100155415 /* CoreBluetooth.framework */; };
 		D3BF54032280525100D15655 /* LENSquareGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BF54022280525100D15655 /* LENSquareGridView.m */; };
 		D3BF54082280584100D15655 /* LENSquareGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BF54062280584100D15655 /* LENSquareGridViewController.m */; };
 		D3BF54092280584100D15655 /* LENSquareGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BF54072280584100D15655 /* LENSquareGridViewController.xib */; };
@@ -164,6 +167,10 @@
 		D3B8EC3E22F5603500155415 /* LENNetworkUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENNetworkUtil.m; sourceTree = "<group>"; };
 		D3B8EC4022F5623C00155415 /* LENInstanceMQTTClientModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENInstanceMQTTClientModel.h; sourceTree = "<group>"; };
 		D3B8EC4122F5623C00155415 /* LENInstanceMQTTClientModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENInstanceMQTTClientModel.m; sourceTree = "<group>"; };
+		D3B8EC4422F9119D00155415 /* LENBluetoothViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENBluetoothViewController.h; sourceTree = "<group>"; };
+		D3B8EC4522F9119D00155415 /* LENBluetoothViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENBluetoothViewController.m; sourceTree = "<group>"; };
+		D3B8EC4622F9119D00155415 /* LENBluetoothViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENBluetoothViewController.xib; sourceTree = "<group>"; };
+		D3B8EC4922F9121100155415 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		D3BF54012280525100D15655 /* LENSquareGridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENSquareGridView.h; sourceTree = "<group>"; };
 		D3BF54022280525100D15655 /* LENSquareGridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENSquareGridView.m; sourceTree = "<group>"; };
 		D3BF54042280526000D15655 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -213,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B8EC4A22F9121100155415 /* CoreBluetooth.framework in Frameworks */,
 				019BC4E553C35149CF866575 /* libPods-LedonDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +245,7 @@
 		5C6A3A0F718C42D88F022CA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3B8EC4922F9121100155415 /* CoreBluetooth.framework */,
 				B9CE7ACE0015F7BBB384C0D2 /* libPods-LedonDemo.a */,
 			);
 			name = Frameworks;
@@ -379,6 +388,16 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		D3B8EC4322F9117200155415 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				D3B8EC4422F9119D00155415 /* LENBluetoothViewController.h */,
+				D3B8EC4522F9119D00155415 /* LENBluetoothViewController.m */,
+				D3B8EC4622F9119D00155415 /* LENBluetoothViewController.xib */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
 		D3BF5400228051F100D15655 /* SquareGrid */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +437,7 @@
 		D3CBF2C722486B9C00DECFC3 /* LedonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D3B8EC4322F9117200155415 /* Bluetooth */,
 				D3B8EC3622F55A7500155415 /* Network */,
 				D3B8EC2922F434A500155415 /* MQTT */,
 				D3FC2ADF22E838DB008E6E50 /* Functions */,
@@ -638,6 +658,7 @@
 				D365E14B227538D300D158D5 /* DocumentShareTest.pdf in Resources */,
 				D3AFDDF42276D6210033DB64 /* LENDocumentReceiveViewController.xib in Resources */,
 				D3B8EC2E22F434CD00155415 /* LENMQTTViewController.xib in Resources */,
+				D3B8EC4822F9119D00155415 /* LENBluetoothViewController.xib in Resources */,
 				D365E149227537CD00D158D5 /* LENDocumentShareViewController.xib in Resources */,
 				D3FC09A42293F4DD008B63A4 /* LENQRCodeViewController.xib in Resources */,
 				D3FC2ADE22E838BE008E6E50 /* README.md in Resources */,
@@ -755,6 +776,7 @@
 				D321CD1C22941147000F3915 /* LENQRCodeScanViewController.m in Sources */,
 				D3FC2AE222E8390D008E6E50 /* LENFunctionWifi.m in Sources */,
 				D31E0C1822CDD11600D3CA51 /* UITableViewCell+LENEasy.m in Sources */,
+				D3B8EC4722F9119D00155415 /* LENBluetoothViewController.m in Sources */,
 				D3B8EC3522F4396200155415 /* LENMQTTPackage.m in Sources */,
 				D31E0C1022CDCC7C00D3CA51 /* UITableView+LENEasy.m in Sources */,
 				D3B8EC3222F436E200155415 /* LENMQTTClientModel.m in Sources */,

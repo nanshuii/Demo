@@ -18,6 +18,7 @@
 #import "LENTurntableViewController.h"
 #import "LENColorSelectViewController.h"
 #import "LENMQTTViewController.h"
+#import "LENBluetoothViewController.h"
 
 #define kStatusBarAndNavigationBarHeight (Is_Iphone_X) ? 88 : 64
 #define Is_Iphone_X kFullScreenHeight >= 812.0
@@ -37,7 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.titles = @[@[@"文件分享与快速预览", @"接收文件分享", @"MQTT Demo"],@[@"方块网格选择", @"二维码的生成和扫描", @"通知设定", @"环形加载圈" , @"方向按键", @"转盘", @"颜色的选择"], @[@"自定义的TableViewCell"]];
+    self.titles = @[@[@"文件分享与快速预览", @"接收文件分享", @"MQTT Demo", @"蓝牙"],@[@"方块网格选择", @"二维码的生成和扫描", @"通知设定", @"环形加载圈" , @"方向按键", @"转盘", @"颜色的选择"], @[@"自定义的TableViewCell"]];
     [self.view addSubview:self.baseTableView];
 }
 
@@ -78,6 +79,9 @@
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.section == 0 && indexPath.row == 2) {
         LENMQTTViewController *vc = [LENMQTTViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.section == 0 && indexPath.row == 3) {
+        LENBluetoothViewController *vc = [LENBluetoothViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
     
