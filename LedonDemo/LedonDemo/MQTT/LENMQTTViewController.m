@@ -9,9 +9,11 @@
 #import "LENMQTTViewController.h"
 #import <MQTTClient/MQTTClient.h>
 
-@interface LENMQTTViewController ()<MQTTSessionDelegate>
+@interface LENMQTTViewController ()<MQTTSessionDelegate, MQTTSessionManagerDelegate>
 
 @property (nonatomic, strong) MQTTSession *mySession;
+
+@property (nonatomic, strong) MQTTSessionManager *mySessionManager;
 
 @end
 
@@ -26,17 +28,30 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    MQTTCFSocketTransport *transport = [[MQTTCFSocketTransport alloc] init];
-    transport.host = @"172.16.6.108";
-    transport.port = 1883;
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        MQTTCFSocketTransport *transport = [[MQTTCFSocketTransport alloc] init];
+        transport.host = @"172.16.6.108";
+        transport.port = 1883;
+        
+        self.mySession = [[MQTTSession alloc] init];
+        self.mySession.transport = transport;
+        self.mySession.delegate = self;
+        [self.mySession setUserName:@"juyi"];
+        [self.mySession setPassword:@"test"];
+        
+        [self.mySession connectAndWaitTimeout:1];
+    });
+}
+
+- (MQTTSSLSecurityPolicy *)customSecurityPolicy
+{
     
-    self.mySession = [[MQTTSession alloc] init];
-    self.mySession.transport = transport;
-    self.mySession.delegate = self;
-    [self.mySession setUserName:@"juyi"];
-    [self.mySession setPassword:@"test"];
+    MQTTSSLSecurityPolicy *securityPolicy = [MQTTSSLSecurityPolicy policyWithPinningMode:MQTTSSLPinningModeNone];
     
-    [self.mySession connectAndWaitTimeout:5];
+    securityPolicy.allowInvalidCertificates = YES;
+    securityPolicy.validatesCertificateChain = YES;
+    securityPolicy.validatesDomainName = NO;
+    return securityPolicy;
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
@@ -46,7 +61,6 @@
 
 - (void)setUpUI{
     self.title = @"MQTT";
-   
 }
 
 - (IBAction)test:(id)sender {
@@ -54,6 +68,7 @@
 }
 
 - (void)subscribeTopic:(MQTTSession *)session topic:(NSString *)topicUrl{
+    NSLog(@"state = %li", self.mySession.status);
     [session subscribeToTopic:topicUrl atLevel:MQTTQosLevelAtMostOnce subscribeHandler:^(NSError *error, NSArray<NSNumber *> *gQoss) {
         if (error) {
             NSLog(@"连接失败 %@", error.localizedDescription);
@@ -70,8 +85,26 @@
 //    MQTTSessionEventConnectionError,
 //    MQTTSessionEventProtocolError,
 //    MQTTSessionEventConnectionClosedByBroker
-    
     NSLog(@"event code = %li", eventCode);
 }
+
+- (void)newMessage:(MQTTSession *)session data:(NSData *)data onTopic:(NSString *)topic qos:(MQTTQosLevel)qos retained:(BOOL)retained mid:(unsigned int)mid{
+    NSString * str  = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"str = %@ data = %@", str, data);
+    self.label.text = str;
+    
+}
+
+- (IBAction)send:(id)sender {
+    NSString *str = @"2333";
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"\nstr = %@\n-------\n data = %@\n",str,data);
+    [self.mySession publishData:data onTopic:@"dddd" retain:NO qos:MQTTQosLevelAtLeastOnce publishHandler:^(NSError *error) {
+        if (error) {
+            NSLog(@"error = %@", error.description);
+        }
+    }];
+}
+
 
 @end

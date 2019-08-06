@@ -50,6 +50,10 @@
 		D3B8EC4722F9119D00155415 /* LENBluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC4522F9119D00155415 /* LENBluetoothViewController.m */; };
 		D3B8EC4822F9119D00155415 /* LENBluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B8EC4622F9119D00155415 /* LENBluetoothViewController.xib */; };
 		D3B8EC4A22F9121100155415 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B8EC4922F9121100155415 /* CoreBluetooth.framework */; };
+		D3B8EC6422F975B000155415 /* LENCodeNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC6222F975B000155415 /* LENCodeNetworkViewController.m */; };
+		D3B8EC6522F975B000155415 /* LENCodeNetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B8EC6322F975B000155415 /* LENCodeNetworkViewController.xib */; };
+		D3B8EC6822F978AB00155415 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B8EC6722F978AB00155415 /* CFNetwork.framework */; };
+		D3B8EC6B22F97A9E00155415 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8EC6A22F97A9E00155415 /* GCDAsyncUdpSocket.m */; };
 		D3BF54032280525100D15655 /* LENSquareGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BF54022280525100D15655 /* LENSquareGridView.m */; };
 		D3BF54082280584100D15655 /* LENSquareGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BF54062280584100D15655 /* LENSquareGridViewController.m */; };
 		D3BF54092280584100D15655 /* LENSquareGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BF54072280584100D15655 /* LENSquareGridViewController.xib */; };
@@ -171,6 +175,13 @@
 		D3B8EC4522F9119D00155415 /* LENBluetoothViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENBluetoothViewController.m; sourceTree = "<group>"; };
 		D3B8EC4622F9119D00155415 /* LENBluetoothViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENBluetoothViewController.xib; sourceTree = "<group>"; };
 		D3B8EC4922F9121100155415 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		D3B8EC6122F975B000155415 /* LENCodeNetworkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENCodeNetworkViewController.h; sourceTree = "<group>"; };
+		D3B8EC6222F975B000155415 /* LENCodeNetworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENCodeNetworkViewController.m; sourceTree = "<group>"; };
+		D3B8EC6322F975B000155415 /* LENCodeNetworkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENCodeNetworkViewController.xib; sourceTree = "<group>"; };
+		D3B8EC6722F978AB00155415 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D3B8EC6922F97A9E00155415 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		D3B8EC6A22F97A9E00155415 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		D3B8EC6C22F9847100155415 /* LedonDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LedonDemo.entitlements; sourceTree = "<group>"; };
 		D3BF54012280525100D15655 /* LENSquareGridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENSquareGridView.h; sourceTree = "<group>"; };
 		D3BF54022280525100D15655 /* LENSquareGridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENSquareGridView.m; sourceTree = "<group>"; };
 		D3BF54042280526000D15655 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -220,6 +231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B8EC6822F978AB00155415 /* CFNetwork.framework in Frameworks */,
 				D3B8EC4A22F9121100155415 /* CoreBluetooth.framework in Frameworks */,
 				019BC4E553C35149CF866575 /* libPods-LedonDemo.a in Frameworks */,
 			);
@@ -245,6 +257,7 @@
 		5C6A3A0F718C42D88F022CA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3B8EC6722F978AB00155415 /* CFNetwork.framework */,
 				D3B8EC4922F9121100155415 /* CoreBluetooth.framework */,
 				B9CE7ACE0015F7BBB384C0D2 /* libPods-LedonDemo.a */,
 			);
@@ -398,6 +411,18 @@
 			path = Bluetooth;
 			sourceTree = "<group>";
 		};
+		D3B8EC6622F975B600155415 /* CodeNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				D3B8EC6922F97A9E00155415 /* GCDAsyncUdpSocket.h */,
+				D3B8EC6A22F97A9E00155415 /* GCDAsyncUdpSocket.m */,
+				D3B8EC6122F975B000155415 /* LENCodeNetworkViewController.h */,
+				D3B8EC6222F975B000155415 /* LENCodeNetworkViewController.m */,
+				D3B8EC6322F975B000155415 /* LENCodeNetworkViewController.xib */,
+			);
+			path = CodeNetwork;
+			sourceTree = "<group>";
+		};
 		D3BF5400228051F100D15655 /* SquareGrid */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +462,8 @@
 		D3CBF2C722486B9C00DECFC3 /* LedonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D3B8EC6C22F9847100155415 /* LedonDemo.entitlements */,
+				D3B8EC6622F975B600155415 /* CodeNetwork */,
 				D3B8EC4322F9117200155415 /* Bluetooth */,
 				D3B8EC3622F55A7500155415 /* Network */,
 				D3B8EC2922F434A500155415 /* MQTT */,
@@ -615,6 +642,11 @@
 				TargetAttributes = {
 					D3CBF2C422486B9C00DECFC3 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 1;
+							};
+						};
 					};
 					D3CBF2DC22486B9C00DECFC3 = {
 						CreatedOnToolsVersion = 10.1;
@@ -673,6 +705,7 @@
 				D3CBF2FE22486BBB00DECFC3 /* MainViewController.xib in Resources */,
 				D365E14E227569FE00D158D5 /* DocumentShareTest.jpeg in Resources */,
 				D3AFDDFE2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.xib in Resources */,
+				D3B8EC6522F975B000155415 /* LENCodeNetworkViewController.xib in Resources */,
 				D380DD6E22A54E8800BEBAA0 /* LENCycleProgressViewController.xib in Resources */,
 				D365E15022756CD200D158D5 /* DocumentShareTest.MOV in Resources */,
 				D36D9FDE22CD9435009E69F6 /* LENEasyTableViewController.xib in Resources */,
@@ -753,6 +786,7 @@
 				D3CBF2CD22486B9C00DECFC3 /* ViewController.m in Sources */,
 				D31E0C2222CDD67E00D3CA51 /* LENEasyTableViewModel.m in Sources */,
 				D3ECE76422CF79D6009AD334 /* LENTurnTableView.m in Sources */,
+				D3B8EC6422F975B000155415 /* LENCodeNetworkViewController.m in Sources */,
 				D380DD7122A550A200BEBAA0 /* LENCycleProgressView.m in Sources */,
 				D3BF54082280584100D15655 /* LENSquareGridViewController.m in Sources */,
 				D3AFDDF32276D6210033DB64 /* LENDocumentReceiveViewController.m in Sources */,
@@ -778,6 +812,7 @@
 				D31E0C1822CDD11600D3CA51 /* UITableViewCell+LENEasy.m in Sources */,
 				D3B8EC4722F9119D00155415 /* LENBluetoothViewController.m in Sources */,
 				D3B8EC3522F4396200155415 /* LENMQTTPackage.m in Sources */,
+				D3B8EC6B22F97A9E00155415 /* GCDAsyncUdpSocket.m in Sources */,
 				D31E0C1022CDCC7C00D3CA51 /* UITableView+LENEasy.m in Sources */,
 				D3B8EC3222F436E200155415 /* LENMQTTClientModel.m in Sources */,
 				D3AFDDFD2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m in Sources */,
@@ -956,6 +991,7 @@
 			baseConfigurationReference = D99C01399CF7BB3C45FEDFBE /* Pods-LedonDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LedonDemo/LedonDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DF2WD834FA;
 				INFOPLIST_FILE = LedonDemo/Info.plist;
@@ -975,6 +1011,7 @@
 			baseConfigurationReference = C582AAC34D41BA94BB7FC84E /* Pods-LedonDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LedonDemo/LedonDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DF2WD834FA;
 				INFOPLIST_FILE = LedonDemo/Info.plist;

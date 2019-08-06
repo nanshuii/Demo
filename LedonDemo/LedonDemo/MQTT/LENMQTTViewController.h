@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LENMQTTViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -304,7 +304,7 @@ typedef void (^MQTTPublishHandler)(NSError *error);
         data:(NSData *)data
         onTopic:(NSString *)topic
         qos:(MQTTQosLevel)qos
-        retained:(BOOL)retained
+        retained:(BOOL)retainedm
         mid:(unsigned int)mid {
     ...
  }
