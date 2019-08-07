@@ -108,6 +108,7 @@
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral{
     NSLog(@"设备连接成功，设备名：%@", peripheral.name);
     // 外设发现服务,传nil代表不过滤
+    [self.mCentral stopScan];
     [self.mPeripheral discoverServices:nil];
 }
 

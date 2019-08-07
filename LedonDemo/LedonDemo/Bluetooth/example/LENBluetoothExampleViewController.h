@@ -1,8 +1,8 @@
 //
-//  LENBluetoothViewController.h
+//  LENBluetoothExampleViewController.h
 //  LedonDemo
 //
-//  Created by 林南水 on 2019/8/6.
+//  Created by 林南水 on 2019/8/7.
 //  Copyright © 2019 ledon. All rights reserved.
 //
 
@@ -10,10 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LENBluetoothViewController : UIViewController
-
-
-
+@interface LENBluetoothExampleViewController : UIViewController
 
 @end
 

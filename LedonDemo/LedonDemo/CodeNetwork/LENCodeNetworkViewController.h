@@ -12,6 +12,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LENCodeNetworkViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *ssidLabel;
+
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel1;
+
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel2;
+
+
 @property (weak, nonatomic) IBOutlet UIImageView *codeImage;
 
 

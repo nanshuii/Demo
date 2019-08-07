@@ -34,6 +34,8 @@
 		D389A6A122D6C92F00890A87 /* LENColorSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D389A69F22D6C92F00890A87 /* LENColorSelectViewController.m */; };
 		D389A6A222D6C92F00890A87 /* LENColorSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D389A6A022D6C92F00890A87 /* LENColorSelectViewController.xib */; };
 		D389A6A522D6C97500890A87 /* LENColorSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D389A6A422D6C97500890A87 /* LENColorSelectView.m */; };
+		D3AADA2E22FAB90800F6EE22 /* LENBluetoothExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AADA2C22FAB90800F6EE22 /* LENBluetoothExampleViewController.m */; };
+		D3AADA2F22FAB90800F6EE22 /* LENBluetoothExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AADA2D22FAB90800F6EE22 /* LENBluetoothExampleViewController.xib */; };
 		D3AFDDF32276D6210033DB64 /* LENDocumentReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDDF12276D6210033DB64 /* LENDocumentReceiveViewController.m */; };
 		D3AFDDF42276D6210033DB64 /* LENDocumentReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AFDDF22276D6210033DB64 /* LENDocumentReceiveViewController.xib */; };
 		D3AFDDFD2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDDFB2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m */; };
@@ -146,6 +148,9 @@
 		D389A6A022D6C92F00890A87 /* LENColorSelectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENColorSelectViewController.xib; sourceTree = "<group>"; };
 		D389A6A322D6C97500890A87 /* LENColorSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENColorSelectView.h; sourceTree = "<group>"; };
 		D389A6A422D6C97500890A87 /* LENColorSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENColorSelectView.m; sourceTree = "<group>"; };
+		D3AADA2B22FAB90800F6EE22 /* LENBluetoothExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENBluetoothExampleViewController.h; sourceTree = "<group>"; };
+		D3AADA2C22FAB90800F6EE22 /* LENBluetoothExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENBluetoothExampleViewController.m; sourceTree = "<group>"; };
+		D3AADA2D22FAB90800F6EE22 /* LENBluetoothExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENBluetoothExampleViewController.xib; sourceTree = "<group>"; };
 		D3AFDDEF2276CEAD0033DB64 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3AFDDF02276D6210033DB64 /* LENDocumentReceiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENDocumentReceiveViewController.h; sourceTree = "<group>"; };
 		D3AFDDF12276D6210033DB64 /* LENDocumentReceiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENDocumentReceiveViewController.m; sourceTree = "<group>"; };
@@ -355,6 +360,16 @@
 			path = ColorSelect;
 			sourceTree = "<group>";
 		};
+		D3AADA2A22FAB00600F6EE22 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				D3AADA2B22FAB90800F6EE22 /* LENBluetoothExampleViewController.h */,
+				D3AADA2C22FAB90800F6EE22 /* LENBluetoothExampleViewController.m */,
+				D3AADA2D22FAB90800F6EE22 /* LENBluetoothExampleViewController.xib */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
 		D3AFDDEC2276CE670033DB64 /* DocumentReceive */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +422,7 @@
 				D3B8EC4422F9119D00155415 /* LENBluetoothViewController.h */,
 				D3B8EC4522F9119D00155415 /* LENBluetoothViewController.m */,
 				D3B8EC4622F9119D00155415 /* LENBluetoothViewController.xib */,
+				D3AADA2A22FAB00600F6EE22 /* example */,
 			);
 			path = Bluetooth;
 			sourceTree = "<group>";
@@ -646,6 +662,9 @@
 							com.apple.AccessWiFi = {
 								enabled = 1;
 							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 						};
 					};
 					D3CBF2DC22486B9C00DECFC3 = {
@@ -689,6 +708,7 @@
 				D3ECE76122CF79B4009AD334 /* LENTurntableViewController.xib in Resources */,
 				D365E14B227538D300D158D5 /* DocumentShareTest.pdf in Resources */,
 				D3AFDDF42276D6210033DB64 /* LENDocumentReceiveViewController.xib in Resources */,
+				D3AADA2F22FAB90800F6EE22 /* LENBluetoothExampleViewController.xib in Resources */,
 				D3B8EC2E22F434CD00155415 /* LENMQTTViewController.xib in Resources */,
 				D3B8EC4822F9119D00155415 /* LENBluetoothViewController.xib in Resources */,
 				D365E149227537CD00D158D5 /* LENDocumentShareViewController.xib in Resources */,
@@ -816,6 +836,7 @@
 				D31E0C1022CDCC7C00D3CA51 /* UITableView+LENEasy.m in Sources */,
 				D3B8EC3222F436E200155415 /* LENMQTTClientModel.m in Sources */,
 				D3AFDDFD2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m in Sources */,
+				D3AADA2E22FAB90800F6EE22 /* LENBluetoothExampleViewController.m in Sources */,
 				D3BF54032280525100D15655 /* LENSquareGridView.m in Sources */,
 				D31E0C1422CDCD4C00D3CA51 /* LENEasyTableViewTextCell.m in Sources */,
 				D36D9FDD22CD9435009E69F6 /* LENEasyTableViewController.m in Sources */,

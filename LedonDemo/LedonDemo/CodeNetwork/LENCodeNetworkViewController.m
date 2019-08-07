@@ -18,6 +18,7 @@
     GCDAsyncUdpSocket *_serverUdpSocket;
     int _port;
     BOOL _connectionDone;
+    NSString *_ssid;
 }
 
 @end
@@ -33,27 +34,30 @@
 - (void)setUpUI{
     self.title = @"二维码配网";
     // 获取ip生成一个二维码
-    NSString *ssid = [self currentWifiSSID];
-    NSLog(@"ssid = %@", ssid);
-    if (ssid) {
-        NSString *ip = [self currentWifiIp];
-        NSLog(@"ip = %@", ip);
-        if ([ip isEqualToString:@"error"]) {
-            
-        } else {
-//            WIFI:T:WPA;S:ipcCameraClock;P:88888888;IP:192.168.199.10;PORT:1020;
-            NSLog(@"ssid = %@ ip = %@", ssid, ip);
-            
-//            ssid = [ssid stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-            _port = arc4random() % 100;
-            _port += 1024;
-            NSString *code = [NSString stringWithFormat:@"WIFI:T:WPA;S:%@;P:%@;IP:%@;PORT:%i;", ssid, @"123456789a", ip, _port];
-            [self createQRCode:code];
-            [self setupServerUdpSocket];
-            [self setupClientUdpSocket];
-        }
+    _ssid = [self currentWifiSSID];
+    NSLog(@"ssid = %@", _ssid);
+    self.ssidLabel.text = _ssid;
+    self.contentLabel.numberOfLines = 0;
+}
+
+- (IBAction)createCode:(UIButton *)sender {
+    NSString *ip = [self currentWifiIp];
+    NSLog(@"ip = %@", ip);
+    if ([ip isEqualToString:@"error"]) {
+        
+    } else {
+        //            WIFI:T:WPA;S:ipcCameraClock;P:88888888;IP:192.168.199.10;PORT:1020;
+        
+        //            ssid = [ssid stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        _port = arc4random() % 100;
+        _port += 1024;
+        NSString *code = [NSString stringWithFormat:@"WIFI:T:WPA;S:%@;P:%@;IP:%@;PORT:%i;", _ssid, self.passwordTextField.text, ip, _port];
+        [self createQRCode:code];
+        [self setupServerUdpSocket];
+        [self setupClientUdpSocket];
     }
 }
+
 
 - (void)createQRCode:(NSString *)string{
     //创建名为"CIQRCodeGenerator"的CIFilter
@@ -207,6 +211,7 @@ withFilterContext:(id)filterContext
     NSLog(@"data length = %li", data.length);
     // 设备连接WIFI成功后会像10000端口发送至少20个UDP广播包所附带的随机数
     if (data != nil && data.length > 20) {
+        _connectionDone = true;
         UInt8 *bytes = (UInt8 *) [data bytes];
         NSLog(@"连接成功");
         NSLog(@"smart link 连接成功 length = %li byte[0] = %i", data.length, bytes[0]);
@@ -229,7 +234,11 @@ withFilterContext:(id)filterContext
         NSData *data3 = [data subdataWithRange:range3];
         NSString *str3 = [[NSString alloc] initWithData:data3 encoding:NSUTF8StringEncoding];
         NSLog(@"data3 = %@ str3 = %@", data3.description, str3);
-        _connectionDone = true;
+        
+        self.contentLabel.text = [NSString stringWithFormat:@"ip:%@", str1];
+        self.contentLabel1.text = [NSString stringWithFormat:@"deviceNo:%@", hexString];
+        self.contentLabel2.text = [NSString stringWithFormat:@"uid:%@", str3];
+        
     }
     //    }
 }
