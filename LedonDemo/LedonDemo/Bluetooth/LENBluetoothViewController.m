@@ -9,7 +9,7 @@
 #import "LENBluetoothViewController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
-#define mBLEName @"林南水的MacBook Pro"
+#define mBLEName @"KeyBox"
 
 @interface LENBluetoothViewController ()<CBCentralManagerDelegate, CBPeripheralDelegate>
 

@@ -9,7 +9,7 @@
 #import "LENBluetoothExampleViewController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
-#define kServerUUID @"E8EC18F9-85EC-11D1-8803-046DFF82EF05"
+#define kServerUUID @"FC9F73A6-25FD-F2DB-0566-EE6D4D42A21F"
 // AA01C905-B324-D1EC-EC95-0A1A980181D3 耳机
 // 620EC112-5013-27EE-8B36-D8A067A6E669 手机
 // E8EC18F9-85EC-11D1-8803-046DFF82EF05 电脑
@@ -84,7 +84,7 @@
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral{
     NSLog(@"连接上了设备");
     // 已经连接上了设备 停止扫描 去发现服务
-//    [self.centeralManager stopScan];
+    [self.centeralManager stopScan];
     NSLog(@"peripheral = %@", peripheral.description);
 //    self.peripheral.delegate = self;
     [self.peripheral discoverServices:nil];
@@ -114,14 +114,6 @@
         //外设发现特征
         [peripheral discoverCharacteristics:nil forService:service];
     }
-    
-//    for (CBCharacteristic *characteristic in service.characteristics) {
-//        if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"2A23"]]) {
-//            // 读取mac地址
-//            [self.peripheral readValueForCharacteristic:characteristic];
-//        }
-//        NSLog(@"characteristic uuid = %@", characteristic.UUID);
-//    }
 }
 
 

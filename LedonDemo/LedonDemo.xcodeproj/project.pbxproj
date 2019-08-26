@@ -69,6 +69,9 @@
 		D3CBF2ED22486B9C00DECFC3 /* LedonDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CBF2EC22486B9C00DECFC3 /* LedonDemoUITests.m */; };
 		D3CBF2FD22486BBB00DECFC3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CBF2FB22486BBB00DECFC3 /* MainViewController.m */; };
 		D3CBF2FE22486BBB00DECFC3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CBF2FC22486BBB00DECFC3 /* MainViewController.xib */; };
+		D3D934A7230FE7760033632B /* LENBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D934A5230FE7760033632B /* LENBannerViewController.m */; };
+		D3D934A8230FE7760033632B /* LENBannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D934A6230FE7760033632B /* LENBannerViewController.xib */; };
+		D3D934AB230FE7890033632B /* LENBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D934AA230FE7890033632B /* LENBanner.m */; };
 		D3E58CA322AF911D00FD678A /* LENDirectionControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E58CA122AF911D00FD678A /* LENDirectionControlViewController.m */; };
 		D3E58CA422AF911D00FD678A /* LENDirectionControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E58CA222AF911D00FD678A /* LENDirectionControlViewController.xib */; };
 		D3ECE76022CF79B4009AD334 /* LENTurntableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ECE75E22CF79B4009AD334 /* LENTurntableViewController.m */; };
@@ -193,6 +196,9 @@
 		D3BF54052280584100D15655 /* LENSquareGridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENSquareGridViewController.h; sourceTree = "<group>"; };
 		D3BF54062280584100D15655 /* LENSquareGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENSquareGridViewController.m; sourceTree = "<group>"; };
 		D3BF54072280584100D15655 /* LENSquareGridViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENSquareGridViewController.xib; sourceTree = "<group>"; };
+		D3C8948B230BCEA0007E72AF /* MQTT!.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MQTT!.h"; sourceTree = "<group>"; };
+		D3C8948C230BCEAC007E72AF /* MQTT2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTT2.h; sourceTree = "<group>"; };
+		D3C8948D230BCEB5007E72AF /* MQTT3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTT3.h; sourceTree = "<group>"; };
 		D3CBF2C522486B9C00DECFC3 /* LedonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LedonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3CBF2C822486B9C00DECFC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3CBF2C922486B9C00DECFC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -212,6 +218,11 @@
 		D3CBF2FA22486BBB00DECFC3 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		D3CBF2FB22486BBB00DECFC3 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D3CBF2FC22486BBB00DECFC3 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		D3D934A4230FE7760033632B /* LENBannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENBannerViewController.h; sourceTree = "<group>"; };
+		D3D934A5230FE7760033632B /* LENBannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENBannerViewController.m; sourceTree = "<group>"; };
+		D3D934A6230FE7760033632B /* LENBannerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENBannerViewController.xib; sourceTree = "<group>"; };
+		D3D934A9230FE7890033632B /* LENBanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENBanner.h; sourceTree = "<group>"; };
+		D3D934AA230FE7890033632B /* LENBanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENBanner.m; sourceTree = "<group>"; };
 		D3E58CA022AF911D00FD678A /* LENDirectionControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LENDirectionControlViewController.h; sourceTree = "<group>"; };
 		D3E58CA122AF911D00FD678A /* LENDirectionControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LENDirectionControlViewController.m; sourceTree = "<group>"; };
 		D3E58CA222AF911D00FD678A /* LENDirectionControlViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LENDirectionControlViewController.xib; sourceTree = "<group>"; };
@@ -389,6 +400,7 @@
 		D3B8EC2922F434A500155415 /* MQTT */ = {
 			isa = PBXGroup;
 			children = (
+				D3C89488230BCE82007E72AF /* MQTT1 */,
 				D3B8EC2A22F434CD00155415 /* LENMQTTViewController.h */,
 				D3B8EC2B22F434CD00155415 /* LENMQTTViewController.m */,
 				D3B8EC2C22F434CD00155415 /* LENMQTTViewController.xib */,
@@ -452,6 +464,32 @@
 			path = SquareGrid;
 			sourceTree = "<group>";
 		};
+		D3C89488230BCE82007E72AF /* MQTT1 */ = {
+			isa = PBXGroup;
+			children = (
+				D3C8948B230BCEA0007E72AF /* MQTT!.h */,
+				D3C89489230BCE8C007E72AF /* MQTT2 */,
+			);
+			path = MQTT1;
+			sourceTree = "<group>";
+		};
+		D3C89489230BCE8C007E72AF /* MQTT2 */ = {
+			isa = PBXGroup;
+			children = (
+				D3C8948C230BCEAC007E72AF /* MQTT2.h */,
+				D3C8948A230BCE92007E72AF /* MQTT3 */,
+			);
+			path = MQTT2;
+			sourceTree = "<group>";
+		};
+		D3C8948A230BCE92007E72AF /* MQTT3 */ = {
+			isa = PBXGroup;
+			children = (
+				D3C8948D230BCEB5007E72AF /* MQTT3.h */,
+			);
+			path = MQTT3;
+			sourceTree = "<group>";
+		};
 		D3CBF2BC22486B9C00DECFC3 = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				D3B8EC6C22F9847100155415 /* LedonDemo.entitlements */,
+				D3D934A3230FE7580033632B /* Banner */,
 				D3B8EC6622F975B600155415 /* CodeNetwork */,
 				D3B8EC4322F9117200155415 /* Bluetooth */,
 				D3B8EC3622F55A7500155415 /* Network */,
@@ -527,6 +566,18 @@
 				D3CBF2EE22486B9C00DECFC3 /* Info.plist */,
 			);
 			path = LedonDemoUITests;
+			sourceTree = "<group>";
+		};
+		D3D934A3230FE7580033632B /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				D3D934A4230FE7760033632B /* LENBannerViewController.h */,
+				D3D934A5230FE7760033632B /* LENBannerViewController.m */,
+				D3D934A6230FE7760033632B /* LENBannerViewController.xib */,
+				D3D934A9230FE7890033632B /* LENBanner.h */,
+				D3D934AA230FE7890033632B /* LENBanner.m */,
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 		D3E58C9C22AF90B500FD678A /* DirectionControl */ = {
@@ -702,6 +753,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3D934A8230FE7760033632B /* LENBannerViewController.xib in Resources */,
 				D3CBF2D522486B9C00DECFC3 /* LaunchScreen.storyboard in Resources */,
 				D3CBF2D222486B9C00DECFC3 /* Assets.xcassets in Resources */,
 				D3313A9022DEC07E00FF3C3F /* labixiaoxin.jpeg in Resources */,
@@ -834,9 +886,11 @@
 				D3B8EC3522F4396200155415 /* LENMQTTPackage.m in Sources */,
 				D3B8EC6B22F97A9E00155415 /* GCDAsyncUdpSocket.m in Sources */,
 				D31E0C1022CDCC7C00D3CA51 /* UITableView+LENEasy.m in Sources */,
+				D3D934A7230FE7760033632B /* LENBannerViewController.m in Sources */,
 				D3B8EC3222F436E200155415 /* LENMQTTClientModel.m in Sources */,
 				D3AFDDFD2276E8960033DB64 /* LENDocumentReceiveCollectionViewCell.m in Sources */,
 				D3AADA2E22FAB90800F6EE22 /* LENBluetoothExampleViewController.m in Sources */,
+				D3D934AB230FE7890033632B /* LENBanner.m in Sources */,
 				D3BF54032280525100D15655 /* LENSquareGridView.m in Sources */,
 				D31E0C1422CDCD4C00D3CA51 /* LENEasyTableViewTextCell.m in Sources */,
 				D36D9FDD22CD9435009E69F6 /* LENEasyTableViewController.m in Sources */,
