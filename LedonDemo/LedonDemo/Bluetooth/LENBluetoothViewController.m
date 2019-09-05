@@ -96,7 +96,24 @@
 
 # pragma mark -- 连接外设
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI{
-    NSLog(@"搜索到设备名：%@，设备ID：%@，信号强度 = %i",peripheral.name,peripheral.identifier, [RSSI integerValue]);
+//    NSLog(@"搜索到设备名：%@，设备ID：%@，信号强度 = %i",peripheral.name,peripheral.identifier, [RSSI integerValue]);
+    
+    NSLog(@"name = %@ data = %@", peripheral.name ,advertisementData.description);
+    NSData *data = [advertisementData valueForKey:@"kCBAdvDataManufacturerData"];
+    if (data && data.length == 13) {
+        Byte *bytes = (Byte *)[data bytes];
+//        for (int i = 0; i < [data length]; i++) {
+//            NSLog(@"byte = %d %x", bytes[i], bytes[i]);
+//        }
+        NSString *company_id = [NSString stringWithFormat:@"0x%02x%02x", bytes[1], bytes[0]]; // 前两位 厂商ID
+        NSString *type = [NSString stringWithFormat:@"0x%02x%02x%02x%02x", bytes[5], bytes[4], bytes[3], bytes[2]]; // 后四位 设备类型
+        NSString *mac = [NSString stringWithFormat:@"0x%02x%02x%02x%02x%02x%02x", bytes[11], bytes[10], bytes[9], bytes[8], bytes[7], bytes[6]]; // 后六位 mac地址
+        NSString *bind = [NSString stringWithFormat:@"%x", bytes[12]]; // 绑定标识 0 绑定 1 出厂状态
+        NSLog(@"company_id = %@ type = %@ mac = %@ bind = %@", company_id, type, mac, bind);
+    }
+    
+    
+    
     if ([peripheral.name isEqualToString:mBLEName]) {
         self.mPeripheral = peripheral;
         self.mPeripheral.delegate = self;
@@ -116,12 +133,20 @@
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
 {
     NSLog(@"设备连接失败，设备名：%@", peripheral.name);
+    // 连接失败
+    NSLog(@"重连");
+    [self.mCentral scanForPeripheralsWithServices:nil // 通过某些服务筛选外设
+                                          options:nil]; // dict,条件
 }
 
 // 丢失连接
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
 {
     NSLog(@"设备丢失连接，设备名：%@", peripheral.name);
+    // 重连
+    NSLog(@"重连");
+    [self.mCentral scanForPeripheralsWithServices:nil // 通过某些服务筛选外设
+                                          options:nil]; // dict,条件
 }
 
 # pragma mark -- 获取外设的服务后调用的方法
@@ -152,20 +177,7 @@
      CBCharacteristicPropertyNotify                                                  = 0x10,
      */
     for (CBCharacteristic *cha in service.characteristics) {
-        if(cha.properties & CBCharacteristicPropertyWrite){
-            NSLog(@"CBCharacteristicPropertyWrite");
-            NSLog(@"%lu",cha.properties & CBCharacteristicPropertyWrite);
-            self.mCharacteristic = cha;
-        }else if(cha.properties & CBCharacteristicPropertyWriteWithoutResponse){
-            NSLog(@"CBCharacteristicPropertyWriteWithoutResponse");
-        }else if(cha.properties & CBCharacteristicPropertyRead){
-            NSLog(@"CBCharacteristicPropertyRead");
-        }else if(cha.properties & CBCharacteristicPropertyNotify){
-            NSLog(@"CBCharacteristicPropertyNotify");
-        }else if(cha.properties & CBCharacteristicPropertyIndicate){
-            NSLog(@"CBCharacteristicPropertyIndicate");
-        }
-        NSLog(@"设备获取特征成功，服务名：%@，特征值名：%@，特征UUID：%@，特征数量：%lu",service,cha,cha.UUID,service.characteristics.count);
+        NSLog(@"设备获取特征成功，服务名：%@，uuid: %@ 特征值名：%@，特征UUID：%@，特征数量：%lu",service,service.UUID, cha,cha.UUID,service.characteristics.count);
         //获取特征对应的描述 会回调didDiscoverDescriptorsForCharacteristic
         [peripheral discoverDescriptorsForCharacteristic:cha];
         //获取特征的值 会回调didUpdateValueForCharacteristic
@@ -181,13 +193,12 @@
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
 {
     NSString *value = [[NSString alloc] initWithData:characteristic.value encoding:NSASCIIStringEncoding];
-    NSLog(@"特征名：%@，特征值：%@",characteristic,value);
+    NSLog(@"特征名：%@，UUID: %@, 特征值：%@",characteristic, characteristic.UUID, value);
+    // Manufacturer Name String 制造商名字 ShangHai JuYi Technology Co., Ltd.
+    // Model Number String 模型名字 JYGLASS
+    // Hardware Revision String 硬件版本 1.0.0
+    // Firmwave Revision String 固件版本 sd=0x0098, app=255.15.15, bl=255.15.15
     
-    if([value isEqualToString:@"open"]){
-        
-    }else if([value isEqualToString:@"close"]){
-        
-    }
 }
 
 //通知状态改变时调用
@@ -223,6 +234,7 @@
 -(void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error{
     NSLog(@"数据发送成功");
 }
+
 
 /*
 #pragma mark - Navigation

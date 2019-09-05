@@ -1,18 +1,18 @@
 //
-//  LENAnimationViewController.m
+//  LENProgressViewController.m
 //  LedonDemo
 //
-//  Created by 林南水 on 2019/8/26.
+//  Created by 林南水 on 2019/9/3.
 //  Copyright © 2019 ledon. All rights reserved.
 //
 
-#import "LENAnimationViewController.h"
+#import "LENProgressViewController.h"
 
-@interface LENAnimationViewController ()
+@interface LENProgressViewController ()
 
 @end
 
-@implementation LENAnimationViewController
+@implementation LENProgressViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

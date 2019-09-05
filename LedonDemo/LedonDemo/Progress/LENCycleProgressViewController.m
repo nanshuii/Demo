@@ -29,6 +29,11 @@
     [self setUpUI];
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self timerStop];
+}
+
 - (void)setUpUI{
     self.title = @"环形加载圈";
     self.allTime = 60;

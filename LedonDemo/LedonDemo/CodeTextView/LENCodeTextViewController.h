@@ -1,8 +1,8 @@
 //
-//  LENAnimationViewController.h
+//  LENCodeTextViewController.h
 //  LedonDemo
 //
-//  Created by 林南水 on 2019/8/26.
+//  Created by 林南水 on 2019/9/5.
 //  Copyright © 2019 ledon. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LENAnimationViewController : UIViewController
+@interface LENCodeTextViewController : UIViewController
 
 @end
 

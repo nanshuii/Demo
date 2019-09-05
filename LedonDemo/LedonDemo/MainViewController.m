@@ -13,6 +13,7 @@
 #import "LENQRCodeViewController.h"
 #import "LENNotificationsViewController.h"
 #import "LENCycleProgressViewController.h"
+#import "LENProgressViewController.h"
 #import "LENDirectionControlViewController.h"
 #import "LENEasyTableViewController.h"
 #import "LENTurntableViewController.h"
@@ -22,6 +23,7 @@
 #import "LENBluetoothExampleViewController.h"
 #import "LENCodeNetworkViewController.h"
 #import "LENBannerViewController.h"
+#import "LENCodeTextViewController.h"
 
 #define kStatusBarAndNavigationBarHeight (Is_Iphone_X) ? 88 : 64
 #define Is_Iphone_X kFullScreenHeight >= 812.0
@@ -41,7 +43,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.titles = @[@[@"文件分享与快速预览", @"接收文件分享", @"MQTT Demo", @"蓝牙", @"蓝牙example" ,@"二维码配网"],@[@"方块网格选择", @"二维码的生成和扫描", @"通知设定", @"环形加载圈" , @"方向按键", @"转盘", @"颜色的选择", @"banner"], @[@"自定义的TableViewCell"]];
+    self.titles = @[@[@"文件分享与快速预览", @"接收文件分享", @"MQTT Demo", @"蓝牙", @"蓝牙example" ,@"二维码配网"],@[@"方块网格选择", @"二维码的生成和扫描", @"通知设定", @"进度条" , @"方向按键", @"转盘", @"颜色的选择", @"banner", @"验证码输入"], @[@"自定义的TableViewCell"]];
     [self.view addSubview:self.baseTableView];
 }
 
@@ -104,7 +106,7 @@
         LENNotificationsViewController *vc = [LENNotificationsViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.section == 1 && indexPath.row == 3) {
-        LENCycleProgressViewController *vc = [LENCycleProgressViewController new];
+        LENProgressViewController *vc = [LENProgressViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.section == 1 && indexPath.row == 4) {
         LENDirectionControlViewController *vc = [LENDirectionControlViewController new];
@@ -117,6 +119,9 @@
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.section == 1 && indexPath.row == 7) {
         LENBannerViewController *vc = [LENBannerViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.section == 1 && indexPath.row == 8) {
+        LENCodeTextViewController *vc = [LENCodeTextViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
     
