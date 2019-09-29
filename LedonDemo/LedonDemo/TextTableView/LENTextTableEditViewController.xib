@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LENTextTableEditViewController">
+            <connections>
+                <outlet property="textView" destination="8ZA-Vf-CG5" id="OdK-0Q-nSY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfV-WV-tJm">
+                    <rect key="frame" x="363" y="64" width="31" height="30"/>
+                    <state key="normal" title="完成"/>
+                    <connections>
+                        <action selector="done:" destination="-1" eventType="touchUpInside" id="d32-2c-zCF"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8ZA-Vf-CG5">
+                    <rect key="frame" x="20" y="104" width="374" height="738"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="8ZA-Vf-CG5" secondAttribute="trailing" constant="20" id="2eI-10-K06"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="TfV-WV-tJm" secondAttribute="trailing" constant="20" id="57h-fg-uGb"/>
+                <constraint firstItem="TfV-WV-tJm" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="D6V-P0-EYu"/>
+                <constraint firstItem="8ZA-Vf-CG5" firstAttribute="top" secondItem="TfV-WV-tJm" secondAttribute="bottom" constant="10" id="IDT-HT-kwp"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="8ZA-Vf-CG5" secondAttribute="bottom" constant="20" id="jWU-Yy-MA5"/>
+                <constraint firstItem="8ZA-Vf-CG5" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="vKG-mn-z7P"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
+        </view>
+    </objects>
+</document>
